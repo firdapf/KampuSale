@@ -5,220 +5,274 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kampusale - Solusi Jual Beli Mahasiswa Bebas Potongan Marketplace</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .gradient-text { background: linear-gradient(90deg, #4f46e5, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+    </style>
 </head>
-<body class="bg-[#fcfbf9] text-slate-800 font-sans antialiased">
+<body class="bg-[#fafafa] text-slate-900 antialiased">
 
-    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="glass-nav sticky top-0 z-50 border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <span class="text-2xl font-black text-indigo-950 tracking-wider">KAMPU<span class="text-orange-500">SALE</span></span>
+                <span class="text-2xl font-extrabold text-indigo-950 tracking-tighter italic underline decoration-orange-500">KAMPU<span class="text-orange-500">SALE</span></span>
             </div>
-            <div class="hidden md:flex space-x-8 font-semibold text-slate-600 text-sm">
-                <a href="#masalah" class="hover:text-indigo-900 transition">Masalah</a>
-                <a href="#perbandingan" class="hover:text-indigo-900 transition">Simulasi Penghematan</a>
-                <a href="#fitur" class="hover:text-indigo-900 transition">Fitur Utama</a>
-                <a href="#faq" class="hover:text-indigo-900 transition">FAQ</a>
+            <div class="hidden lg:flex space-x-8 font-bold text-slate-600 text-sm">
+                <a href="#masalah" class="hover:text-indigo-600 transition">Masalah</a>
+                <a href="#katalog" class="hover:text-indigo-600 transition">Katalog</a>
+                <a href="#simulasi" class="hover:text-indigo-600 transition">Simulasi</a>
+                <a href="#faq" class="hover:text-indigo-600 transition">FAQ</a>
             </div>
-            <a href="https://wa.me/6285866882464" target="_blank" class="bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-emerald-600 transition shadow-md text-sm">
-                Mulai Jual Sekarang <i class="fa-solid fa-arrow-right ml-1"></i>
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/6285866882464" target="_blank" class="bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-200 text-sm hidden sm:block">
+                    Mulai Jual Sekarang
+                </a>
+            </div>
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto px-6 pt-16 pb-12 lg:pt-24 lg:pb-16 grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-7 space-y-6">
-            <span class="bg-indigo-50 text-indigo-950 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider border border-indigo-100">
-                🚀 Platform Promosi Digital Berbasis Media Sosial
-            </span>
-            <h1 class="text-4xl lg:text-6xl font-black text-indigo-950 leading-tight tracking-tight">
-                Platform Jual Beli Mahasiswa yang Ingin <span class="text-indigo-600 underline decoration-orange-500 decoration-wavy">Lepas dari Marketplace.</span>
+    <header class="max-w-7xl mx-auto px-6 pt-16 pb-12 lg:pt-24 grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+            <div class="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                </span>
+                Platform Promosi Digital Mahasiswa
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-extrabold text-indigo-950 leading-[1.1] tracking-tight">
+                Web Jual Beli Mahasiswa yang Ingin <span class="gradient-text">Lepas dari Marketplace.</span>
             </h1>
-            <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
-                Setiap bulan, komisi dan biaya admin marketplace besar memotong keuntungan jualanmu. <strong class="text-indigo-950">Kampusale</strong> hadir membantu mahasiswa berjualan produk terpakai, buku kuliah, atau jasa secara mandiri, 100% tanpa potongan.
+            <p class="text-lg text-slate-500 leading-relaxed max-w-lg">
+                Setiap bulan, komisi dan admin fee marketplace besar memotong uang jajanmu. Kampusale membantu mahasiswa <span class="text-indigo-950 font-bold">berbisnis mandiri</span> di media sosial—100% bebas potongan & tanpa ongkir.
             </p>
-            <div class="pt-2 flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/6285866882464" target="_blank" class="bg-emerald-500 text-white text-center px-8 py-4 rounded-xl font-bold shadow-lg shadow-emerald-500/20 hover:bg-emerald-600 transition flex items-center justify-center gap-2 text-base">
-                    <i class="fa-brands fa-whatsapp text-xl"></i> Hubungi WA: 085866882464
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <a href="https://wa.me/6285866882464" target="_blank" class="bg-emerald-500 text-white text-center px-10 py-5 rounded-2xl font-bold shadow-xl shadow-emerald-200 hover:bg-emerald-600 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Chat Admin: 085866882464
                 </a>
-                <a href="#perbandingan" class="bg-white text-center text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 hover:border-slate-300 transition shadow-sm">
-                    Hitung Penghematan Saya
+                <a href="#simulasi" class="bg-white text-center text-indigo-950 border-2 border-slate-200 px-10 py-5 rounded-2xl font-bold hover:bg-slate-50 transition-all text-lg">
+                    Hitung Penghematan
                 </a>
             </div>
         </div>
-        
-        <div class="lg:col-span-5 bg-indigo-950 p-8 rounded-3xl text-white shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-800/40 rounded-full blur-2xl"></div>
-            <span class="text-orange-400 font-bold text-xs uppercase tracking-widest block mb-2">Analisis Mahasiswa</span>
-            <h3 class="text-xl font-bold mb-4">Kenapa Harus Pindah ke Kampusale?</h3>
-            <p class="text-sm text-indigo-200 leading-relaxed mb-6">
-                Sama seperti analisis bisnis pada platform Jangkar.io, ketergantungan pada pihak ketiga membuat margin keuntungan kamu menipis. Kampusale mengembalikan kendali dan ekosistem transaksi langsung ke tangan mahasiswa.
-            </p>
-            <div class="space-y-3">
-                <div class="flex items-center gap-3 text-sm bg-indigo-900/50 p-3 rounded-xl border border-indigo-800/50">
-                    <i class="fa-solid fa-circle-check text-emerald-400"></i> No Admin Fee / Tanpa Potongan
-                </div>
-                <div class="flex items-center gap-3 text-sm bg-indigo-900/50 p-3 rounded-xl border border-indigo-800/50">
-                    <i class="fa-solid fa-circle-check text-emerald-400"></i> Promosi Otomatis via IG & TikTok @kampuSale
+        <div class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-tr from-indigo-500 to-orange-400 rounded-[2.5rem] blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+            <div class="relative bg-white rounded-[2rem] p-4 shadow-2xl">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/2566028869141985118" alt="Mahasiswa Berbisnis" class="rounded-[1.5rem] w-full h-full object-cover">
+                <div class="absolute bottom-10 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 hidden md:block animate-bounce">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-emerald-100 p-2 rounded-full text-emerald-600"><i class="fa-solid fa-wallet"></i></div>
+                        <div><p class="text-xs font-bold text-slate-400 uppercase">Untung Bersih</p><p class="text-lg font-black text-slate-800">Rp 0 Potongan</p></div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="bg-indigo-950 text-white border-y border-indigo-900 py-8 shadow-inner">
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <div class="text-3xl lg:text-4xl font-black text-emerald-400">0%</div>
-                <div class="text-xs lg:text-sm text-indigo-200 mt-1">Biaya Potongan Komisi</div>
+    <section class="max-w-7xl mx-auto px-6 mb-24">
+        <div class="bg-indigo-950 rounded-[3rem] py-12 px-8 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center border-b-8 border-orange-500 shadow-2xl">
+            <div class="space-y-1 border-r border-indigo-800/50">
+                <p class="text-4xl lg:text-5xl font-black text-white">0%</p>
+                <p class="text-sm text-indigo-300 font-bold uppercase tracking-widest">Biaya Admin</p>
             </div>
-            <div>
-                <div class="text-3xl lg:text-4xl font-black text-emerald-400">Rp 0</div>
-                <div class="text-xs lg:text-sm text-indigo-200 mt-1">Ongkos Kirim (Sistem COD)</div>
+            <div class="space-y-1 border-r border-indigo-800/50">
+                <p class="text-4xl lg:text-5xl font-black text-white">Rp 0</p>
+                <p class="text-sm text-indigo-300 font-bold uppercase tracking-widest">Biaya Ongkir</p>
             </div>
-            <div>
-                <div class="text-3xl lg:text-4xl font-black text-emerald-400">100%</div>
-                <div class="text-xs lg:text-sm text-indigo-200 mt-1">Keuntungan Bersih Milikmu</div>
+            <div class="space-y-1 border-r border-indigo-800/50">
+                <p class="text-4xl lg:text-5xl font-black text-white">24/7</p>
+                <p class="text-sm text-indigo-300 font-bold uppercase tracking-widest">Promosi Medsos</p>
             </div>
-            <div>
-                <div class="text-3xl lg:text-4xl font-black text-emerald-400">Disertifikasi</div>
-                <div class="text-xs lg:text-sm text-indigo-200 mt-1">Khusus Komunitas Kampus</div>
+            <div class="space-y-1">
+                <p class="text-4xl lg:text-5xl font-black text-white">100%</p>
+                <p class="text-sm text-indigo-300 font-bold uppercase tracking-widest">Mahasiswa Sah</p>
             </div>
         </div>
     </section>
 
-    <section id="masalah" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
+    <section id="masalah" class="bg-white py-24">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="max-w-2xl">
-                <h2 class="text-3xl font-black text-indigo-950 tracking-tight">Masalah Nyata Jualan Kuliah Tradisional</h2>
-                <p class="text-slate-500 mt-2">Mengapa cara lama di marketplace komersial atau grup chat biasa mulai tidak efektif?</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 mt-12">
-                <div class="p-6 bg-[#fcfbf9] rounded-2xl border border-slate-200/60 shadow-sm">
-                    <div class="w-12 h-12 bg-red-50 text-red-500 rounded-xl flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-percent"></i></div>
-                    <h4 class="font-bold text-indigo-950 text-lg mb-2">Potongan Komisi Sangat Tinggi</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Aplikasi e-commerce besar memotong omset jualan 5% sampai 15% per produk. Angka yang sangat besar untuk skala kantong mahasiswa.</p>
-                </div>
-                <div class="p-6 bg-[#fcfbf9] rounded-2xl border border-slate-200/60 shadow-sm">
-                    <div class="w-12 h-12 bg-red-50 text-red-500 rounded-xl flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-truck"></i></div>
-                    <h4 class="font-bold text-indigo-950 text-lg mb-2">Beban Ongkos Kirim Mahal</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Seringkali harga barang bekas kosan jauh lebih murah daripada ongkos kirimnya. Akibatnya pembeli sering membatalkan pesanan.</p>
-                </div>
-                <div class="p-6 bg-[#fcfbf9] rounded-2xl border border-slate-200/60 shadow-sm">
-                    <div class="w-12 h-12 bg-red-50 text-red-500 rounded-xl flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-comment-slash"></i></div>
-                    <h4 class="font-bold text-indigo-950 text-lg mb-2">Grup WA Kampus yang Spam</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Mempromosikan jualan lewat grup chat WhatsApp seringkali tenggelam dalam hitungan menit dan mengganggu anggota grup lainnya.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="perbandingan" class="max-w-6xl mx-auto px-6 py-12">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl font-black text-indigo-950">Simulasi Perbandingan Penghematan</h2>
-            <p class="text-slate-500 mt-2">Bandingkan transparansi pendapatan bersih jika beralih menggunakan platform Kampusale.</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div class="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm relative">
-                <span class="absolute top-4 right-4 bg-red-50 text-red-600 text-xs font-bold px-3 py-1 rounded-full">Cara Lama</span>
-                <h3 class="text-lg font-bold text-slate-800 mb-4"><i class="fa-solid fa-store mr-2 text-slate-400"></i> Marketplace Komersial</h3>
-                <ul class="space-y-4 text-sm text-slate-600">
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> Wajib bayar biaya layanan & komisi aplikasi</li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> Pembeli dibebani biaya penanganan & ongkir</li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-xmark text-red-500 mt-1"></i> Pencairan dana tertahan sistem berhari-hari</li>
-                </ul>
-                <div class="mt-8 pt-6 border-t border-slate-100">
-                    <span class="text-slate-500 text-xs block">Estimasi Keuntungan Bersih:</span>
-                    <span class="text-red-600 font-black text-2xl mt-1 block">Hanya Diterima ~85%</span>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-3xl shadow-md border-2 border-indigo-600 relative">
-                <span class="absolute top-4 right-4 bg-emerald-50 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full">Rekomendasi</span>
-                <h3 class="text-lg font-bold text-indigo-950 mb-4"><i class="fa-solid fa-rocket mr-2 text-indigo-600"></i> Menggunakan Kampusale</h3>
-                <ul class="space-y-4 text-sm text-slate-700">
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <strong>0% Potongan Admin</strong> — Pendapatan 100% utuh</li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <strong>Bebas Biaya Ongkir</strong> — Transaksi COD aman langsung di kampus</li>
-                    <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <strong>Pencairan Instan</strong> — Bayar tunai atau QRIS langsung di tempat</li>
-                </ul>
-                <div class="mt-8 pt-6 border-t border-slate-100">
-                    <span class="text-slate-500 text-xs block">Estimasi Keuntungan Bersih:</span>
-                    <span class="text-emerald-500 font-black text-2xl mt-1 block">Utuh 100% Masuk Kantong</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="fitur" class="bg-indigo-950 text-white py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-black tracking-tight">Strategi & Fitur Utama Kami</h2>
-                <p class="text-indigo-200 mt-2">Sistem promosi digital terpadu yang dirancang khusus untuk ekosistem ekonomi mahasiswa.</p>
+                <h2 class="text-4xl font-extrabold text-indigo-950 mb-4 tracking-tight">Realita Pahit Jualan di Marketplace Tradisional.</h2>
+                <div class="w-20 h-2 bg-orange-500 mb-8 rounded-full"></div>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-indigo-900/40 p-8 rounded-2xl border border-indigo-800 hover:border-orange-500 transition duration-300">
-                    <div class="text-orange-400 text-3xl mb-4"><i class="fa-solid fa-share-nodes"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Amplifikasi Media Sosial</h3>
-                    <p class="text-indigo-200 text-sm leading-relaxed">Produk yang kamu daftarkan tidak hanya dipajang di web, tapi akan dibantu promosi secara otomatis melalui Instagram & TikTok resmi <strong class="text-white">@kampuSale</strong>.</p>
+                <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition"><i class="fa-solid fa-scissors"></i></div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Potongan Komisi Gila-gilaan</h3>
+                    <p class="text-slate-500 leading-relaxed">Aplikasi besar memotong hingga 15% dari harga jualmu. Angka yang besar untuk sekadar jualan buku bekas atau jajan kosan.</p>
                 </div>
-                <div class="bg-indigo-900/40 p-8 rounded-2xl border border-indigo-800 hover:border-orange-500 transition duration-300">
-                    <div class="text-orange-400 text-3xl mb-4"><i class="fa-solid fa-handshake"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Sistem COD Area Kampus</h3>
-                    <p class="text-indigo-200 text-sm leading-relaxed">Sistem janjian ketemuan langsung di kantin, perpustakaan, atau koridor gedung kuliah. Cek barang langsung di tempat, bebas biaya kurir.</p>
+                <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Ongkir Lebih Mahal dari Barang</h3>
+                    <p class="text-slate-500 leading-relaxed">Sering batal deal karena ongkir kurir lebih mahal dari harga barangnya sendiri. Padahal pembeli cuma beda gedung fakultas.</p>
                 </div>
-                <div class="bg-indigo-900/40 p-8 rounded-2xl border border-indigo-800 hover:border-orange-500 transition duration-300">
-                    <div class="text-orange-400 text-3xl mb-4"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Verifikasi Komunitas Aman</h3>
-                    <p class="text-indigo-200 text-sm leading-relaxed">Meminimalisir risiko penipuan (scamming) karena target pasar dikunci hanya di dalam lingkungan universitas dan sesama rekan mahasiswa.</p>
+                <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Pencairan Dana yang Lama</h3>
+                    <p class="text-slate-500 leading-relaxed">Uang hasil jualanmu tertahan di sistem berhari-hari. Padahal kamu lagi butuh uang tunai buat bayar fotokopi hari ini.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="max-w-4xl mx-auto px-6 py-20">
-        <h2 class="text-3xl font-black text-center text-indigo-950 mb-10">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+    <section id="katalog" class="py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl font-extrabold text-indigo-950 mb-2">Barang Trending di Kampus</h2>
+            <p class="text-slate-500">Lihat barang-barang yang laku keras di ekosistem Kampusale saat ini.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100 hover:-translate-y-2 transition-all duration-300">
+                <div class="h-64 overflow-hidden"><img src="http://googleusercontent.com/image_collection/image_retrieval/12418889481655438488" class="w-full h-full object-cover"></div>
+                <div class="p-6">
+                    <span class="text-xs font-bold text-indigo-600 uppercase mb-2 block tracking-widest">Kategori: Buku</span>
+                    <h4 class="text-xl font-extrabold text-slate-800 mb-1 leading-tight">Buku Makroekonomi Mulus (Edisi 9)</h4>
+                    <p class="text-2xl font-black text-emerald-600 mb-4">Rp 45.000</p>
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-400 pt-4 border-t border-slate-50">
+                        <span><i class="fa-solid fa-location-dot mr-1"></i> Perpus Pusat</span>
+                        <span class="bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Baru Masuk!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100 hover:-translate-y-2 transition-all duration-300">
+                <div class="h-64 overflow-hidden"><img src="http://googleusercontent.com/image_collection/image_retrieval/3271514509962217578" class="w-full h-full object-cover"></div>
+                <div class="p-6">
+                    <span class="text-xs font-bold text-indigo-600 uppercase mb-2 block tracking-widest">Kategori: Elektronik</span>
+                    <h4 class="text-xl font-extrabold text-slate-800 mb-1 leading-tight">Kipas Angin Meja Portabel Putih</h4>
+                    <p class="text-2xl font-black text-emerald-600 mb-4">Rp 75.000</p>
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-400 pt-4 border-t border-slate-50">
+                        <span><i class="fa-solid fa-location-dot mr-1"></i> Gedung Lab A</span>
+                        <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded">Banyak Dicari</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100 hover:-translate-y-2 transition-all duration-300">
+                <div class="h-64 overflow-hidden"><img src="http://googleusercontent.com/image_collection/image_retrieval/5858348238526945687" class="w-full h-full object-cover"></div>
+                <div class="p-6">
+                    <span class="text-xs font-bold text-indigo-600 uppercase mb-2 block tracking-widest">Kategori: Kuliner</span>
+                    <h4 class="text-xl font-extrabold text-slate-800 mb-1 leading-tight">Homemade Brownies Double Choco</h4>
+                    <p class="text-2xl font-black text-emerald-600 mb-4">Rp 15.000/box</p>
+                    <div class="flex items-center justify-between text-xs font-bold text-slate-400 pt-4 border-t border-slate-50">
+                        <span><i class="fa-solid fa-location-dot mr-1"></i> Kantin FISIP</span>
+                        <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Pre-Order</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="simulasi" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="bg-slate-900 rounded-[4rem] p-12 lg:p-20 text-white shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-[120px]"></div>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-extrabold tracking-tight leading-tight">Simulasi Penghematan Keuntunganmu</h2>
+                    <p class="text-indigo-200">Bandingkan transparansi pendapatan bersih antara marketplace komersial vs Kampusale.</p>
+                    <div class="space-y-4 pt-6">
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/10 flex justify-between items-center group hover:bg-white/10 transition">
+                            <span class="font-bold">Marketplace Komersial</span>
+                            <span class="text-red-400 font-bold">Terima: ~85% Saja</span>
+                        </div>
+                        <div class="p-6 bg-emerald-500/10 rounded-2xl border border-emerald-500/40 flex justify-between items-center ring-2 ring-emerald-500/20">
+                            <span class="font-bold">Kampusale (Platform Kami)</span>
+                            <span class="text-emerald-400 font-black text-xl">Utuh 100% Milikmu</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-indigo-300/60 italic mt-4">*Data dihitung berdasarkan rata-rata biaya admin fee dan platform fee aplikasi belanja ternama tahun 2024.</p>
+                </div>
+                <div class="relative bg-white p-10 rounded-[2.5rem] shadow-inner text-indigo-950">
+                    <h3 class="text-xl font-extrabold mb-6 flex items-center gap-2"><i class="fa-solid fa-hand-holding-dollar text-emerald-600"></i> Alur Tanpa Potongan</h3>
+                    <ol class="space-y-6">
+                        <li class="flex gap-4">
+                            <div class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                            <div><p class="font-bold">Daftar & Promosi</p><p class="text-xs text-slate-500">Hubungi WA kami, kirim foto & deskripsi. Kami bantu sebar ke medsos @kampuSale secara gratis.</p></div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                            <div><p class="font-bold">Janjian COD</p><p class="text-xs text-slate-500">Pembeli menghubungimu langsung. Janjian ketemuan di gazebo atau kantin terdekat.</p></div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                            <div><p class="font-bold">Deal & Tunai</p><p class="text-xs text-slate-500">Cek barang di tempat. Pembeli bayar tunai/transfer ke kamu. Kampusale tidak ambil sepeserpun.</p></div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-4xl font-extrabold text-indigo-950 mb-16">Apa Kata Teman Kampus?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm">
+                    <p class="text-lg text-slate-600 italic mb-8 italic font-medium leading-relaxed">"Buku Makro semester lalu numpuk di kosan, pas diiklatin di Kampusale langsung laku dalam 3 jam sama adek tingkat. Lumayan banget dapet modal jajan ekstra!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/106492240769952278" class="w-16 h-16 rounded-full object-cover grayscale border-2 border-indigo-200">
+                        <div><p class="font-extrabold text-indigo-950">Fajar</p><p class="text-sm text-slate-400">Akuntansi 2024</p></div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm">
+                    <p class="text-lg text-slate-600 italic mb-8 italic font-medium leading-relaxed">"Suka banget jajan brownies di sini karena penjualnya satu fakultas. Janjian COD di gazebo perpus, bebas ongkir dan rasa browniesnya juara!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/6469069575422064837" class="w-16 h-16 rounded-full object-cover grayscale border-2 border-indigo-200">
+                        <div><p class="font-extrabold text-indigo-950">Rania</p><p class="text-sm text-slate-400">Ilmu Komunikasi 2025</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="max-w-4xl mx-auto px-6 py-24">
+        <h2 class="text-center text-3xl font-extrabold text-indigo-950 mb-12">Paling Sering Ditanyakan (FAQ)</h2>
         <div class="space-y-4">
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                <h4 class="font-bold text-indigo-950 flex items-center gap-2"><i class="fa-solid fa-circle-question text-indigo-600"></i> Apakah Kampusale mengambil komisi dari penjualan?</h4>
-                <p class="text-slate-600 text-sm mt-2 pl-6">Sama sekali tidak. Kampusale 100% gratis dan berfungsi penuh sebagai platform perantara promosi digital mandiri bagi seluruh mahasiswa.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                <h4 class="font-bold text-indigo-950 flex items-center gap-2"><i class="fa-solid fa-circle-question text-indigo-600"></i> Bagaimana cara mempromosikan barang jualan saya?</h4>
-                <p class="text-slate-600 text-sm mt-2 pl-6">Kamu tinggal klik tombol WhatsApp Hubungi Kami untuk mengirimkan foto, detail deskripsi, beserta harga barang. Tim kami akan langsung memproses penayangannya.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                <h4 class="font-bold text-indigo-950 flex items-center gap-2"><i class="fa-solid fa-circle-question text-indigo-600"></i> Jenis barang apa saja yang boleh dijual?</h4>
-                <p class="text-slate-600 text-sm mt-2 pl-6">Semua barang yang legal dan bermanfaat bagi mahasiswa, contohnya: buku teks kuliah bekas, peralatan kos (meja/kipas), gajet, pakaian layak pakai, hingga kuliner dan jasa cetak tugas.</p>
+            <details class="group bg-white p-6 rounded-2xl border border-slate-200 cursor-pointer transition shadow-sm" open>
+                <summary class="flex justify-between items-center font-bold text-indigo-950 list-none uppercase tracking-tight text-sm">
+                    Berapa biaya daftar jualan di Kampusale?
+                    <span class="group-open:rotate-180 transition"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <p class="mt-4 text-slate-500 text-sm leading-relaxed">100% GRATIS. Kampusale adalah proyek kewirausahaan yang berfokus membangun ekosistem ekonomi internal mahasiswa. Kami tidak menarik biaya pendaftaran maupun komisi hasil jualan.</p>
+            </details>
+            <details class="group bg-white p-6 rounded-2xl border border-slate-200 cursor-pointer transition shadow-sm">
+                <summary class="flex justify-between items-center font-bold text-indigo-950 list-none uppercase tracking-tight text-sm">
+                    Dimana titik aman untuk janjian COD?
+                    <span class="group-open:rotate-180 transition"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <p class="mt-4 text-slate-500 text-sm leading-relaxed">Kami menyarankan 3 lokasi utama: Gazebo Depan Perpus, Kantin Pusat, atau Lobby Fakultas. Pilih tempat yang ramai dan terang untuk keamanan bersama.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="bg-indigo-600 rounded-[3.5rem] p-12 lg:p-24 text-center text-white relative overflow-hidden shadow-2xl">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+            <h2 class="text-4xl lg:text-6xl font-black mb-6">Siap Menguasai <br>Ekonomi Kampusmu?</h2>
+            <p class="text-indigo-100 text-lg max-w-xl mx-auto mb-10">Hubungi kami hari ini untuk mulai mempromosikan barang atau jasamu di platform Kampusale.</p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://wa.me/6285866882464" target="_blank" class="bg-white text-indigo-600 px-10 py-5 rounded-2xl font-black shadow-xl hover:bg-slate-50 transition flex items-center gap-3">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> WHATSAPP: 0858-6688-2464
+                </a>
+                <a href="https://instagram.com/kampuSale" target="_blank" class="bg-indigo-950 text-white px-10 py-5 rounded-2xl font-black shadow-xl hover:bg-black transition flex items-center gap-3">
+                    <i class="fa-brands fa-instagram text-2xl"></i> IG: @kampuSale
+                </a>
+                <a href="https://tiktok.com/@kampuSale" target="_blank" class="bg-black text-white px-10 py-5 rounded-2xl font-black shadow-xl hover:opacity-90 transition flex items-center gap-3 border border-white/20">
+                    <i class="fa-brands fa-tiktok text-2xl"></i> TIKTOK: @kampuSale
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="kontak" class="max-w-4xl mx-auto px-6 pb-20 text-center">
-        <div class="bg-indigo-950 rounded-3xl p-8 md:p-12 text-white shadow-xl relative overflow-hidden">
-            <h2 class="text-3xl font-black">Mulai Kembangkan Usaha Kampusmu Hari Ini</h2>
-            <p class="text-indigo-200 mt-4 max-w-xl mx-auto text-sm md:text-base">
-                Bergabunglah bersama jaringan komunitas Kampusale untuk transaksi jual beli mahasiswa yang jauh lebih menguntungkan, cepat, dan aman.
-            </p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
-                <a href="https://wa.me/6285866882464" target="_blank" class="bg-emerald-500 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-emerald-600 transition text-sm shadow-md flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Admin
-                </a>
-                <a href="https://instagram.com/kampuSale" target="_blank" class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-6 py-3.5 rounded-xl font-bold hover:opacity-90 transition text-sm shadow-md flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-instagram text-lg"></i> Instagram @kampuSale
-                </a>
-                <a href="https://tiktok.com/@kampuSale" target="_blank" class="bg-black text-white px-6 py-3.5 rounded-xl font-bold hover:bg-slate-900 transition text-sm shadow-md flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-tiktok text-lg"></i> TikTok @kampuSale
-                </a>
+    <footer class="bg-white py-12 border-t border-slate-100 text-center text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center space-y-4">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-extrabold text-indigo-950 tracking-tighter italic">KAMPU<span class="text-orange-500 font-bold">SALE</span></span>
             </div>
-        </div>
-    </section>
-
-    <footer class="bg-indigo-950 text-indigo-300/60 py-10 border-t border-indigo-900 text-center text-xs">
-        <div class="max-w-6xl mx-auto px-6 space-y-2">
-            <p class="font-bold text-indigo-200 uppercase tracking-widest text-[10px]">Informasi Kontak & Operasional</p>
-            <p>📲 WhatsApp Resmi: 085866882464 | 🌐 Media Sosial Resmi: @kampuSale</p>
-            <p>📍 Gedung Inkubator Bisnis Kewirausahaan Mahasiswa, Lantai 2</p>
-            <div class="pt-6 border-t border-indigo-900/50 text-[11px] text-indigo-400/40">
-                &copy; 2026 Kampusale - Tugas Proyek Mata Kuliah Kewirausahaan Berbasis Teknologi. All rights reserved.
-            </div>
+            <p class="max-w-md">Platform perantara promosi digital mahasiswa berbasis media sosial. 📍 Gedung Inkubator Kewirausahaan, Lantai 2.</p>
+            <p class="font-bold text-slate-300 uppercase tracking-[0.2em]">&copy; 2026 Kampusale - Tugas Kewirausahaan Berbasis Teknologi</p>
         </div>
     </footer>
 
