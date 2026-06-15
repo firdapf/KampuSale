@@ -271,19 +271,24 @@
                         <img src="images/gantungan_kunci.png" class="max-h-full max-w-full object-contain" alt="Keychain Handmade" onerror="this.src='https://placehold.co/400x400/f1f5f9/4f46e5?text=Keychain';">
                     </div>
                     <div class="p-6 pb-2">
-                        <span class="text-xs font-bold text-indigo-600 uppercase mb-2 block tracking-widest">Kategori: Aksesoris</span>
-                        <h4 class="text-lg font-extrabold text-slate-800 mb-1 leading-tight">Keychain Handmade Custom Gantungan Kunci Lucu</h4>
-                        <p class="text-xl font-black text-emerald-600 mb-3">Rp 10.000</p>
+                        <span class="text-xs font-bold text-indigo-600 uppercase mb-2 block tracking-widest">Kategori: Aksesoris / Jasa Sewa</span>
+                        <h4 class="text-lg font-extrabold text-slate-800 mb-1 leading-tight">Keychain Handmade Custom / Jasa Sewa Aksesoris</h4>
+                        <p class="text-xl font-black text-emerald-600 mb-3">Rp 10.000 <span class="text-xs text-slate-400 font-normal">/ item</span></p>
                     </div>
                 </div>
                 <div class="p-6 pt-0">
                     <div class="flex items-center justify-between text-xs font-bold text-slate-400 pt-3 border-t border-slate-100 mb-4">
                         <span><i class="fa-solid fa-location-dot mr-1"></i> Area Ketintang</span>
-                        <span class="bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded text-[10px]">Tersedia</span>
+                        <span class="bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded text-[10px]">TersediaForm</span>
                     </div>
-                    <a href="https://wa.me/6285866882464?text=Halo%20Admin%20Kampusale%2C%20saya%20tertarik%20dengan%20Keychain%20Handmade" target="_blank" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-xl transition text-xs shadow-md shadow-indigo-100">
-                        <i class="fa-solid fa-comments mr-2"></i>Hubungi Penjual
-                    </a>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="https://wa.me/6285866882464?text=Halo%20Admin%20Kampusale%2C%20saya%20tertarik%20dengan%20Keychain%20Handmade" target="_blank" class="text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 px-2 rounded-xl transition text-[11px] flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-comments"></i> Chat WA
+                        </a>
+                        <button onclick="openModal('Keychain Handmade / Jasa Aksesoris')" class="text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-2 rounded-xl transition text-[11px] flex items-center justify-center gap-1 shadow-md shadow-indigo-100">
+                            <i class="fa-solid fa-file-invoice"></i> Sewa via Web
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -436,6 +441,96 @@
             <p class="text-xs text-center sm:text-right">&copy; 2026 Kampusale Surabaya. Project Kewirausahaan Mahasiswa. All Rights Reserved.</p>
         </div>
     </footer>
+
+
+    <div id="bookingModal" class="fixed inset-0 z-[100] hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-md rounded-3xl p-6 shadow-2xl border border-slate-100 relative animate-in fade-in zoom-in-95 duration-200">
+            
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h3 class="text-lg font-extrabold text-indigo-950">Form Transaksi & Jasa Sewa</h3>
+                    <p class="text-xs text-slate-400">Isi data untuk memesan/menyewa produk ini via web.</p>
+                </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 text-lg p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="transactionForm" onsubmit="submitForm(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-bold text-slate-600 mb-1">Produk / Layanan</label>
+                    <input type="text" id="modalProductName" readonly class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 font-bold text-indigo-950 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-600 mb-1">Nama Lengkap Pembeli</label>
+                    <input type="text" id="buyerName" required placeholder="Contoh: Andi Wijaya" class="w-full border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none text-slate-800">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-600 mb-1">Asal Kampus & Jurusan</label>
+                    <input type="text" id="buyerCampus" required placeholder="Contoh: Unesa - Teknik Informatika" class="w-full border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none text-slate-800">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-600 mb-1">Opsi Transaksi</label>
+                    <select id="trxOption" class="w-full border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none text-slate-800 font-medium">
+                        <option value="Beli Putus / Hak Milik">Beli Putus (Hak Milik)</option>
+                        <option value="Sewa Harian (Acara/Event)">Sewa Harian (Khusus Jasa Sewa)</option>
+                        <option value="Custom Order / Pre-Order">Custom Order / Request Khusus</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-600 mb-1">Rencana Lokasi COD / Serah Terima</label>
+                    <input type="text" id="codLocation" required placeholder="Contoh: Gazebo Perpus Lidah Wetan / Kantin Ketintang" class="w-full border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none text-slate-800">
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition text-xs shadow-lg shadow-emerald-100 flex items-center justify-center gap-2 mt-2">
+                    <i class="fa-solid fa-paper-plane"></i> Kirim Formulir ke Admin
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal(productName) {
+            document.getElementById('modalProductName').value = productName;
+            document.getElementById('bookingModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Kunci scroll layar utama
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+            document.body.style.overflow = ''; // Aktifkan kembali scroll
+        }
+
+        function submitForm(event) {
+            event.preventDefault(); // Cegah reload halaman
+
+            // Ambil value dari form
+            const produk = document.getElementById('modalProductName').value;
+            const nama = document.getElementById('buyerName').value;
+            const kampus = document.getElementById('buyerCampus').value;
+            const opsi = document.getElementById('trxOption').value;
+            const lokasi = document.getElementById('codLocation').value;
+
+            // Susun teks pesan WhatsApp yang rapi dan profesional
+            const baseText = `Halo Admin Kampusale, saya mau order lewat formulir web:\n\n` +
+                             `🛍️ *Produk/Jasa:* ${produk}\n` +
+                             `👤 *Nama Pembeli:* ${nama}\n` +
+                             `🎓 *Kampus/Jurusan:* ${kampus}\n` +
+                             `⚙️ *Opsi Transaksi:* ${opsi}\n` +
+                             `📍 *Lokasi COD:* ${lokasi}\n\n` +
+                             `Mohon dibantu koordinasikan dengan pihak penyedia ya min, terima kasih!`;
+
+            // Encode text agar aman dibaca URL browser
+            const encodedText = encodeURIComponent(baseText);
+            
+            // Redirect langsung ke WhatsApp admin dengan data form
+            window.open(`https://wa.me/6285866882464?text=${encodedText}`, '_blank');
+            
+            // Tutup form kembali
+            closeModal();
+            document.getElementById('transactionForm').reset();
+        }
+    </script>
 
 </body>
 </html>
