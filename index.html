@@ -509,14 +509,15 @@
                     <label class="block font-bold text-slate-600 mb-1">Asal Kampus & Jurusan</label>
                     <input type="text" id="buyerCampus" required placeholder="Contoh: Unesa - Teknik Informatika" class="w-full border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none text-slate-800">
                 </div>
-                <div>
-                    <label class="block font-bold text-slate-600 mb-1">Opsi Transaksi</label>
-                    <select id="trxOption" class="w-full border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none text-slate-800 font-medium">
-                        <option value="Beli Putus / Hak Milik">Beli Putus (Hak Milik)</option>
-                        <option value="Sewa Harian (Acara/Event)">Sewa Harian (Khusus Jasa Sewa)</option>
-                        <option value="Custom Order / Pre-Order">Custom Order / Request Khusus</option>
-                    </select>
-                </div>
+                <!-- Pilihan Metode Pembayaran / Jenis Transaksi -->
+<div>
+    <label class="block font-bold text-slate-600 mb-1">Metode Pembayaran</label>
+    <select id="trxOption" class="w-full border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none text-slate-800 font-medium">
+        <option value="Tunai / Cash saat COD">Tunai / Cash saat COD</option>
+        <option value="Transfer Bank (Admin ke Penjual)">Transfer Bank</option>
+        <option value="E-Wallet (Dana/OVO/QRIS)">E-Wallet (Dana/OVO/QRIS)</option>
+    </select>
+</div>
                 <div>
                     <label class="block font-bold text-slate-600 mb-1">Rencana Lokasi COD / Serah Terima</label>
                     <input type="text" id="codLocation" required placeholder="Contoh: Gazebo Perpus Lidah Wetan / Kantin Ketintang" class="w-full border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none text-slate-800">
