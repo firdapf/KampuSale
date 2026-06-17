@@ -1295,3 +1295,655 @@ observer.observe(el);
 
 </body>
 </html>
+<!-- =========================
+STATISTICS
+========================== -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stat-card">
+            <h2>10K+</h2>
+            <p>Mahasiswa Aktif</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>5K+</h2>
+            <p>Produk Terjual</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>300+</h2>
+            <p>Penjual Terpercaya</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>4.9★</h2>
+            <p>Rating Pengguna</p>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+WHY CHOOSE US
+========================== -->
+<section class="why">
+    <h2>Mengapa Memilih Kampusale?</h2>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="icon">⚡</div>
+            <h3>Cepat</h3>
+            <p>Upload produk hanya dalam hitungan detik.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">🔒</div>
+            <h3>Aman</h3>
+            <p>Transaksi langsung antar mahasiswa.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">💰</div>
+            <h3>Murah</h3>
+            <p>Harga lebih hemat dibanding marketplace umum.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="icon">🎓</div>
+            <h3>Khusus Mahasiswa</h3>
+            <p>Fokus memenuhi kebutuhan dunia perkuliahan.</p>
+        </div>
+
+    </div>
+</section>
+.stats-section{
+padding:80px 10%;
+background:linear-gradient(135deg,#2563eb,#1e40af);
+display:flex;
+justify-content:center;
+}
+
+.stats-section .container{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+width:100%;
+}
+
+.stat-card{
+background:white;
+padding:35px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-10px);
+}
+
+.stat-card h2{
+font-size:40px;
+color:#2563eb;
+margin-bottom:10px;
+}
+
+.stat-card p{
+color:#666;
+}
+
+.why{
+padding:90px 10%;
+background:#fff;
+text-align:center;
+}
+
+.why h2{
+font-size:38px;
+margin-bottom:50px;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.why-card{
+padding:35px;
+background:#f8fafc;
+border-radius:20px;
+transition:.35s;
+}
+
+.why-card:hover{
+background:#2563eb;
+color:white;
+transform:translateY(-12px);
+}
+
+.icon{
+font-size:50px;
+margin-bottom:20px;
+}
+<!-- =========================
+TESTIMONI
+========================== -->
+<section class="testimonial">
+
+    <h2>Apa Kata Pengguna?</h2>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+            <img src="https://i.pravatar.cc/120?img=1" alt="">
+            <h3>Andi</h3>
+            <span>Mahasiswa Informatika</span>
+            <p>"Buku bekas semester lalu langsung laku dalam dua hari. Sangat membantu!"</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="https://i.pravatar.cc/120?img=2" alt="">
+            <h3>Salsa</h3>
+            <span>Mahasiswa Akuntansi</span>
+            <p>"Cari kalkulator scientific jadi jauh lebih murah dibanding marketplace lain."</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="https://i.pravatar.cc/120?img=3" alt="">
+            <h3>Rizky</h3>
+            <span>Mahasiswa Teknik</span>
+            <p>"Interface bersih, cepat, dan mudah dipakai. Recommended!"</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+FAQ
+========================== -->
+
+<section class="faq">
+
+<h2>Pertanyaan yang Sering Ditanyakan</h2>
+
+<div class="faq-item">
+<button class="faq-btn">Apakah Kampusale gratis digunakan?</button>
+<div class="faq-content">
+<p>Ya. Mahasiswa dapat menjual maupun membeli produk tanpa biaya pendaftaran.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-btn">Bagaimana cara menjual produk?</button>
+<div class="faq-content">
+<p>Login, klik tombol jual produk, isi data produk, lalu publikasikan.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-btn">Apakah transaksi aman?</button>
+<div class="faq-content">
+<p>Disarankan melakukan transaksi secara langsung di lingkungan kampus.</p>
+</div>
+</div>
+
+</section>
+/* ==========================
+TESTIMONIAL
+========================== */
+
+.testimonial{
+padding:90px 10%;
+background:#f8fafc;
+text-align:center;
+}
+
+.testimonial h2{
+font-size:38px;
+margin-bottom:50px;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.testimonial-card{
+background:#fff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.testimonial-card:hover{
+transform:translateY(-12px);
+}
+
+.testimonial-card img{
+width:90px;
+height:90px;
+border-radius:50%;
+margin-bottom:20px;
+}
+
+.testimonial-card span{
+display:block;
+color:#888;
+margin:10px 0;
+}
+
+.stars{
+margin-top:15px;
+font-size:22px;
+color:#facc15;
+}
+
+/* ==========================
+FAQ
+========================== */
+
+.faq{
+padding:90px 10%;
+background:white;
+}
+
+.faq h2{
+text-align:center;
+margin-bottom:40px;
+font-size:38px;
+}
+
+.faq-item{
+margin-bottom:20px;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.faq-btn{
+width:100%;
+padding:20px;
+font-size:18px;
+background:#2563eb;
+color:white;
+border:none;
+cursor:pointer;
+text-align:left;
+}
+
+.faq-content{
+display:none;
+padding:20px;
+background:#fff;
+line-height:1.8;
+}
+<script>
+document.querySelectorAll(".faq-btn").forEach(btn=>{
+
+btn.onclick=()=>{
+
+let isi=btn.nextElementSibling;
+
+document.querySelectorAll(".faq-content").forEach(x=>{
+if(x!==isi)x.style.display="none";
+});
+
+isi.style.display=
+isi.style.display==="block"
+?
+"none"
+:
+"block";
+
+};
+
+});
+</script>
+<!-- =========================
+FOOTER
+========================== -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-box">
+<h2>Kampusale</h2>
+<p>
+Marketplace khusus mahasiswa untuk jual beli kebutuhan kuliah dengan mudah,
+aman, dan terpercaya.
+</p>
+</div>
+
+<div class="footer-box">
+<h3>Menu</h3>
+<a href="#">Beranda</a>
+<a href="#">Kategori</a>
+<a href="#">Produk</a>
+<a href="#">Tentang</a>
+</div>
+
+<div class="footer-box">
+<h3>Bantuan</h3>
+<a href="#">FAQ</a>
+<a href="#">Kontak</a>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms</a>
+</div>
+
+<div class="footer-box">
+<h3>Ikuti Kami</h3>
+<div class="social">
+<a href="#">🌐</a>
+<a href="#">📘</a>
+<a href="#">📸</a>
+<a href="#">▶</a>
+</div>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2025 Kampusale. All Rights Reserved.
+</div>
+
+</footer>
+
+<button id="topBtn">↑</button>
+
+<div id="loader">
+<div class="spinner"></div>
+</div>
+/* ==========================
+FOOTER
+========================== */
+
+.footer{
+background:#111827;
+color:white;
+padding:70px 10% 30px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:40px;
+}
+
+.footer-box h2,
+.footer-box h3{
+margin-bottom:20px;
+}
+
+.footer-box p{
+line-height:1.8;
+color:#d1d5db;
+}
+
+.footer-box a{
+display:block;
+margin:10px 0;
+text-decoration:none;
+color:#d1d5db;
+transition:.3s;
+}
+
+.footer-box a:hover{
+color:#facc15;
+padding-left:8px;
+}
+
+.social a{
+display:inline-block;
+font-size:28px;
+margin-right:15px;
+text-decoration:none;
+}
+
+.copyright{
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.15);
+text-align:center;
+color:#9ca3af;
+}
+
+/* BACK TO TOP */
+
+#topBtn{
+position:fixed;
+right:25px;
+bottom:25px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#2563eb;
+color:white;
+font-size:24px;
+cursor:pointer;
+display:none;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+transition:.3s;
+z-index:999;
+}
+
+#topBtn:hover{
+transform:translateY(-5px);
+}
+
+/* LOADER */
+
+#loader{
+position:fixed;
+inset:0;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+transition:.5s;
+}
+
+.spinner{
+width:70px;
+height:70px;
+border:8px solid #ddd;
+border-top:8px solid #2563eb;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+<script>
+
+const topBtn=document.getElementById("topBtn");
+
+window.onscroll=()=>{
+
+if(window.scrollY>400){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+
+};
+
+topBtn.onclick=()=>{
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+};
+
+window.onload=()=>{
+setTimeout(()=>{
+document.getElementById("loader").style.opacity="0";
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},500);
+},600);
+};
+
+</script>
+/* ==========================
+SCROLL ANIMATION
+========================== */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* HOVER */
+
+.product-card,
+.category-card,
+.why-card,
+.testimonial-card,
+.stat-card{
+transition:.35s;
+}
+
+.product-card:hover,
+.category-card:hover,
+.why-card:hover,
+.testimonial-card:hover,
+.stat-card:hover{
+transform:translateY(-12px) scale(1.02);
+}
+
+/* BUTTON */
+
+.btn,
+button{
+transition:.3s;
+}
+
+.btn:hover,
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(37,99,235,.3);
+}
+
+/* SMOOTH */
+
+html{
+scroll-behavior:smooth;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1024px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+gap:40px;
+}
+
+.categories-grid,
+.product-grid,
+.why-grid,
+.testimonial-grid,
+.stats-section .container,
+.footer-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:20px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.categories-grid,
+.product-grid,
+.why-grid,
+.testimonial-grid,
+.stats-section .container,
+.footer-container{
+grid-template-columns:1fr;
+}
+
+section{
+padding:70px 8%;
+}
+
+.stat-card{
+padding:30px;
+}
+
+}
+
+@media(max-width:500px){
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+}
+<script>
+
+const reveal=document.querySelectorAll("section");
+
+function show(){
+
+for(let i=0;i<reveal.length;i++){
+
+const top=reveal[i].getBoundingClientRect().top;
+
+const visible=window.innerHeight-120;
+
+if(top<visible){
+
+reveal[i].classList.add("active");
+
+}
+
+}
+
+}
+
+document.querySelectorAll("section").forEach(x=>{
+x.classList.add("reveal");
+});
+
+window.addEventListener("scroll",show);
+
+show();
+
+</script>
