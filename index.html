@@ -1,412 +1,328 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kampusale | Titip Barang Mahasiswa</title>
+<title>Kampusale | Marketplace Mahasiswa</title>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
+<style>
 
-        *{
-            font-family:'Poppins',sans-serif;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-        html{
-            scroll-behavior:smooth;
-        }
+body{
+background:#f5f8ff;
+color:#222;
+}
 
-        body{
-            background:#f8fafc;
-        }
+a{
+text-decoration:none;
+color:inherit;
+}
 
-        /* Navbar */
+img{
+max-width:100%;
+display:block;
+}
 
-        .nav-link{
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
 
-            position:relative;
-            transition:.3s;
+/* ================= NAVBAR ================= */
 
-        }
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+padding:18px 0;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+z-index:999;
+}
 
-        .nav-link::after{
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-            content:'';
-            position:absolute;
-            left:0;
-            bottom:-6px;
+.logo{
+font-size:28px;
+font-weight:800;
+color:#1565c0;
+}
 
-            width:0%;
-            height:3px;
+.logo span{
+color:#ffb300;
+}
 
-            background:#2563eb;
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
 
-            border-radius:10px;
+nav ul li a{
+font-weight:500;
+transition:.3s;
+}
 
-            transition:.3s;
+nav ul li a:hover{
+color:#1565c0;
+}
 
-        }
+/* ================= HERO ================= */
 
-        .nav-link:hover{
+.hero{
+padding:160px 0 100px;
+background:linear-gradient(135deg,#1565c0,#42a5f5);
+color:white;
+}
 
-            color:#2563eb;
+.hero-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+flex-wrap:wrap;
+}
 
-        }
+.hero-text{
+flex:1;
+}
 
-        .nav-link:hover::after{
+.hero-text h1{
+font-size:56px;
+font-weight:800;
+line-height:1.2;
+margin-bottom:20px;
+}
 
-            width:100%;
+.hero-text p{
+font-size:18px;
+opacity:.95;
+line-height:1.8;
+margin-bottom:35px;
+}
 
-        }
+.btn{
+display:inline-block;
+padding:15px 35px;
+border-radius:50px;
+background:#ffb300;
+color:#222;
+font-weight:700;
+transition:.3s;
+}
 
-        /* Hero Background */
+.btn:hover{
+transform:translateY(-4px);
+}
 
-        .hero{
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+}
 
-            background:
-            radial-gradient(circle at top left,#bfdbfe,transparent 40%),
-            radial-gradient(circle at bottom right,#93c5fd,transparent 40%),
-            white;
+.hero-image i{
+font-size:260px;
+color:white;
+opacity:.9;
+}
 
-        }
+/* ================= SEARCH ================= */
 
-        .card-hover{
+.search-box{
+margin-top:-40px;
+}
 
-            transition:.35s;
+.search{
+background:white;
+padding:18px;
+border-radius:60px;
+display:flex;
+gap:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
 
-        }
+.search input{
+flex:1;
+border:none;
+outline:none;
+font-size:16px;
+}
 
-        .card-hover:hover{
+.search button{
+background:#1565c0;
+color:white;
+border:none;
+padding:14px 28px;
+border-radius:40px;
+cursor:pointer;
+}
 
-            transform:translateY(-10px);
+/* ================= CATEGORY ================= */
 
-        }
+.category{
+padding:70px 0;
+}
 
-    </style>
+.category h2{
+text-align:center;
+margin-bottom:45px;
+font-size:34px;
+}
 
+.category-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.category-card{
+background:white;
+padding:35px 20px;
+border-radius:18px;
+text-align:center;
+transition:.3s;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.category-card:hover{
+transform:translateY(-8px);
+}
+
+.category-card i{
+font-size:42px;
+margin-bottom:18px;
+color:#1565c0;
+}
+
+.category-card h3{
+font-size:18px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero{
+padding:130px 0 70px;
+}
+
+.hero-text h1{
+font-size:38px;
+}
+
+.hero-content{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-image i{
+font-size:180px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
+<nav>
 
-<!-- ================= NAVBAR ================= -->
+<div class="container nav-container">
 
-<header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-lg shadow-sm z-50">
-
-<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-
-<!-- Logo -->
-
-<div class="text-3xl font-bold text-blue-600">
-
-<i class="fa-solid fa-box-open"></i>
-
-Kampusale
-
+<div class="logo">
+Kampus<span>ale</span>
 </div>
 
+<ul>
 
-<!-- Menu -->
+<li><a href="#beranda">Beranda</a></li>
 
-<ul class="hidden md:flex gap-10 font-medium">
+<li><a href="#kategori">Kategori</a></li>
 
-<li>
-<a href="#home" class="nav-link">
-Beranda
-</a>
-</li>
+<li><a href="#produk">Produk</a></li>
 
-<li>
-<a href="#kategori" class="nav-link">
-Kategori
-</a>
-</li>
+<li><a href="#tentang">Tentang</a></li>
 
-<li>
-<a href="#produk" class="nav-link">
-Produk
-</a>
-</li>
-
-<li>
-<a href="#cara" class="nav-link">
-Cara Kerja
-</a>
-</li>
-
-<li>
-<a href="#faq" class="nav-link">
-FAQ
-</a>
-</li>
+<li><a href="#kontak">Kontak</a></li>
 
 </ul>
 
+</div>
 
-<!-- Button -->
+</nav>
 
-<a href="#produk"
-class="hidden md:block bg-blue-600 hover:bg-blue-700 duration-300 text-white px-6 py-3 rounded-full">
+<section class="hero" id="beranda">
 
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<h1>Marketplace Khusus Mahasiswa</h1>
+
+<p>
+Jual, beli, dan sewa berbagai kebutuhan kuliah dengan harga
+terjangkau. Mulai dari buku, elektronik, fashion, hingga
+perlengkapan kos.
+</p>
+
+<a href="#produk" class="btn">
 Lihat Produk
-
-</a>
-
-
-<!-- Mobile -->
-
-<button id="menuBtn" class="md:hidden text-2xl">
-
-<i class="fa-solid fa-bars"></i>
-
-</button>
-
-</div>
-
-
-
-<!-- Mobile Menu -->
-
-<div id="mobileMenu"
-class="hidden bg-white px-8 pb-6 md:hidden">
-
-<a href="#home" class="block py-2">Beranda</a>
-
-<a href="#kategori" class="block py-2">Kategori</a>
-
-<a href="#produk" class="block py-2">Produk</a>
-
-<a href="#cara" class="block py-2">Cara Kerja</a>
-
-<a href="#faq" class="block py-2">FAQ</a>
-
-</div>
-
-</header>
-
-
-
-<!-- ================= HERO ================= -->
-
-
-<section id="home"
-class="hero min-h-screen flex items-center">
-
-
-<div
-class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
-
-
-<!-- Tulisan -->
-
-<div>
-
-<span
-class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm">
-
-Platform Titip Barang Mahasiswa
-
-</span>
-
-<h1
-class="text-5xl md:text-6xl font-bold mt-6 leading-tight">
-
-Titip Barang Jadi
-
-<span class="text-blue-600">
-
-Lebih Mudah,
-
-</span>
-
-Cepat & Aman
-
-</h1>
-
-<p class="text-gray-600 mt-6 text-lg leading-8">
-
-Kampusale membantu mahasiswa menjual atau menitipkan
-barang bekas yang masih layak pakai kepada mahasiswa lain
-dengan proses yang mudah, aman, dan terpercaya.
-
-</p>
-
-
-<div class="flex gap-4 mt-10">
-
-<a href="#produk"
-class="bg-blue-600 hover:bg-blue-700 duration-300 text-white px-8 py-4 rounded-full">
-
-Lihat Produk
-
-</a>
-
-
-<a href="#cara"
-class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white duration-300 px-8 py-4 rounded-full">
-
-Cara Kerja
-
 </a>
 
 </div>
 
+<div class="hero-image">
 
-<!-- Statistik -->
-
-<div class="grid grid-cols-3 gap-6 mt-14">
-
-<div>
-
-<h2 class="text-3xl font-bold text-blue-600">
-
-150+
-
-</h2>
-
-<p class="text-gray-500">
-
-Produk
-
-</p>
-
-</div>
-
-<div>
-
-<h2 class="text-3xl font-bold text-blue-600">
-
-90+
-
-</h2>
-
-<p class="text-gray-500">
-
-Mahasiswa
-
-</p>
-
-</div>
-
-<div>
-
-<h2 class="text-3xl font-bold text-blue-600">
-
-100%
-
-</h2>
-
-<p class="text-gray-500">
-
-Terpercaya
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- Gambar Hero -->
-
-<div class="flex justify-center">
-
-<div
-class="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md card-hover">
-
-<img
-src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
-class="rounded-2xl mb-6">
-
-<h2 class="font-bold text-2xl">
-
-Mulai Titip Barangmu
-
-</h2>
-
-<p class="text-gray-500 mt-3">
-
-Upload foto barangmu dan temukan pembeli
-dengan mudah di lingkungan kampus.
-
-</p>
-
-<button
-class="bg-blue-600 hover:bg-blue-700 duration-300 text-white w-full py-3 rounded-xl mt-6">
-
-Titip Sekarang
-
-</button>
-
-</div>
+<i class="fa-solid fa-store"></i>
 
 </div>
 
 </div>
 
 </section>
-<!-- ================= KATEGORI ================= -->
 
-<section id="kategori" class="py-20 bg-white">
+<section class="search-box">
 
-<div class="max-w-7xl mx-auto px-6">
+<div class="container">
 
-<div class="text-center">
+<div class="search">
 
-<span class="text-blue-600 font-semibold uppercase tracking-widest">
-Kategori
-</span>
+<input
+type="text"
+placeholder="Cari produk..."
+id="searchInput">
 
-<h2 class="text-4xl font-bold mt-3">
-Temukan Barang Sesuai Kebutuhanmu
-</h2>
-
-<p class="text-gray-500 mt-4 max-w-2xl mx-auto">
-Pilih kategori barang yang ingin kamu cari. Semua barang berasal dari mahasiswa dan masih layak digunakan.
-</p>
-
-</div>
-
-<div class="flex flex-wrap justify-center gap-4 mt-12">
-
-<button class="kategori-btn bg-blue-600 text-white px-6 py-3 rounded-full">
-Semua
-</button>
-
-<button class="kategori-btn bg-gray-100 hover:bg-blue-600 hover:text-white duration-300 px-6 py-3 rounded-full">
-📚 Buku
-</button>
-
-<button class="kategori-btn bg-gray-100 hover:bg-blue-600 hover:text-white duration-300 px-6 py-3 rounded-full">
-💻 Elektronik
-</button>
-
-<button class="kategori-btn bg-gray-100 hover:bg-blue-600 hover:text-white duration-300 px-6 py-3 rounded-full">
-👕 Fashion
-</button>
-
-<button class="kategori-btn bg-gray-100 hover:bg-blue-600 hover:text-white duration-300 px-6 py-3 rounded-full">
-🪑 Furniture
-</button>
-
-<button class="kategori-btn bg-gray-100 hover:bg-blue-600 hover:text-white duration-300 px-6 py-3 rounded-full">
-📦 Lainnya
+<button>
+<i class="fa-solid fa-magnifying-glass"></i>
+Cari
 </button>
 
 </div>
@@ -415,305 +331,290 @@ Semua
 
 </section>
 
+<section class="category" id="kategori">
 
+<div class="container">
+
+<h2>Kategori Produk</h2>
+
+<div class="category-grid">
+
+<div class="category-card">
+<i class="fa-solid fa-book"></i>
+<h3>Buku</h3>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-shirt"></i>
+<h3>Fashion</h3>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-laptop"></i>
+<h3>Elektronik</h3>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-house"></i>
+<h3>Kos</h3>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-gamepad"></i>
+<h3>Hobi</h3>
+</div>
+
+<div class="category-card">
+<i class="fa-solid fa-box"></i>
+<h3>Lainnya</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
 <!-- ================= PRODUK ================= -->
 
-<section id="produk" class="py-20 bg-slate-50">
+<section class="products" id="produk">
 
-<div class="max-w-7xl mx-auto px-6">
+<div class="container">
 
-<div class="flex justify-between items-center mb-12 flex-wrap gap-5">
-
-<div>
-
-<span class="text-blue-600 font-semibold uppercase">
-Produk
-</span>
-
-<h2 class="text-4xl font-bold mt-2">
+<h2 class="section-title">
 Produk Terbaru
 </h2>
 
+<div class="filter">
+
+<button class="active" onclick="filterProduk('all')">Semua</button>
+
+<button onclick="filterProduk('buku')">Buku</button>
+
+<button onclick="filterProduk('fashion')">Fashion</button>
+
+<button onclick="filterProduk('elektronik')">Elektronik</button>
+
+<button onclick="filterProduk('kos')">Kos</button>
+
+<button onclick="filterProduk('hobi')">Hobi</button>
+
 </div>
 
-<a href="#"
-class="text-blue-600 font-semibold hover:underline">
+<div class="product-grid">
 
-Lihat Semua →
+<!-- 1 -->
 
-</a>
+<div class="card buku">
 
-</div>
-
-
-<div class="grid md:grid-cols-3 gap-8">
-
-<!-- Produk 1 -->
-
-<div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
-
-<div class="relative">
-
-<img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=900"
-class="h-64 w-full object-cover">
-
-<span class="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full text-sm">
-Buku
+<span class="badge new">
+Baru
 </span>
 
-</div>
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=500">
 
-<div class="p-6">
+<h3>Buku Kalkulus</h3>
 
-<h3 class="text-2xl font-bold">
-Buku Pemrograman
-</h3>
+<p>Buku kuliah kondisi 95%</p>
 
-<p class="text-gray-500 mt-3">
-Masih bagus, lengkap, cocok untuk mahasiswa Informatika.
-</p>
+<h4>Rp65.000</h4>
 
-<div class="flex justify-between items-center mt-6">
-
-<h2 class="text-blue-600 text-2xl font-bold">
-Rp75.000
-</h2>
-
-<a href="#"
-class="bg-blue-600 hover:bg-blue-700 duration-300 text-white px-5 py-2 rounded-full">
-
-Chat
-
-</a>
+<button>Beli</button>
 
 </div>
 
-</div>
+<!-- 2 -->
 
-</div>
+<div class="card buku">
 
-
-<!-- Produk 2 -->
-
-<div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
-
-<div class="relative">
-
-<img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=900"
-class="h-64 w-full object-cover">
-
-<span class="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full text-sm">
-Elektronik
+<span class="badge promo">
+Promo
 </span>
 
-</div>
+<img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=500">
 
-<div class="p-6">
+<h3>Buku Pemrograman</h3>
 
-<h3 class="text-2xl font-bold">
-Laptop Bekas
-</h3>
+<p>Cocok untuk mahasiswa TI</p>
 
-<p class="text-gray-500 mt-3">
-Masih normal digunakan untuk kuliah dan coding.
-</p>
+<h4>Rp80.000</h4>
 
-<div class="flex justify-between items-center mt-6">
-
-<h2 class="text-blue-600 text-2xl font-bold">
-Rp3.500.000
-</h2>
-
-<a href="#"
-class="bg-blue-600 hover:bg-blue-700 duration-300 text-white px-5 py-2 rounded-full">
-
-Chat
-
-</a>
+<button>Beli</button>
 
 </div>
 
-</div>
+<!-- 3 -->
 
-</div>
+<div class="card fashion">
 
-
-<!-- Produk 3 -->
-
-<div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
-
-<div class="relative">
-
-<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=900"
-class="h-64 w-full object-cover">
-
-<span class="absolute top-4 left-4 bg-pink-600 text-white px-4 py-2 rounded-full text-sm">
-Fashion
+<span class="badge favorit">
+Favorit
 </span>
 
-</div>
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
 
-<div class="p-6">
+<h3>Hoodie Kampus</h3>
 
-<h3 class="text-2xl font-bold">
-Jaket Hoodie
-</h3>
+<p>Ukuran M-L</p>
 
-<p class="text-gray-500 mt-3">
-Ukuran L, kondisi 95%, masih sangat bagus.
-</p>
+<h4>Rp120.000</h4>
 
-<div class="flex justify-between items-center mt-6">
-
-<h2 class="text-blue-600 text-2xl font-bold">
-Rp120.000
-</h2>
-
-<a href="#"
-class="bg-blue-600 hover:bg-blue-700 duration-300 text-white px-5 py-2 rounded-full">
-
-Chat
-
-</a>
+<button>Beli</button>
 
 </div>
 
-</div>
+<!-- 4 -->
+
+<div class="card fashion">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500">
+
+<h3>Sepatu Sneakers</h3>
+
+<p>Masih sangat bagus</p>
+
+<h4>Rp250.000</h4>
+
+<button>Beli</button>
 
 </div>
 
+<!-- 5 -->
 
-<!-- Produk 4 -->
+<div class="card elektronik">
 
-<div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
-
-<div class="relative">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900"
-class="h-64 w-full object-cover">
-
-<span class="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-full text-sm">
-Furniture
+<span class="badge new">
+Baru
 </span>
 
-</div>
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
 
-<div class="p-6">
+<h3>iPhone XR</h3>
 
-<h3 class="text-2xl font-bold">
-Meja Belajar
-</h3>
+<p>64GB Fullset</p>
 
-<p class="text-gray-500 mt-3">
-Meja minimalis cocok untuk kos mahasiswa.
-</p>
+<h4>Rp3.400.000</h4>
 
-<div class="flex justify-between items-center mt-6">
-
-<h2 class="text-blue-600 text-2xl font-bold">
-Rp250.000
-</h2>
-
-<a href="#"
-class="bg-blue-600 hover:bg-blue-700 duration-300 text-white px-5 py-2 rounded-full">
-
-Chat
-
-</a>
+<button>Beli</button>
 
 </div>
 
-</div>
+<!-- 6 -->
+
+<div class="card elektronik">
+
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+
+<h3>Headset Sony</h3>
+
+<p>Original</p>
+
+<h4>Rp450.000</h4>
+
+<button>Beli</button>
 
 </div>
 
+<!-- 7 -->
 
-<!-- Produk 5 -->
+<div class="card kos">
 
-<div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500">
 
-<div class="relative">
+<h3>Lampu Belajar</h3>
 
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900"
-class="h-64 w-full object-cover">
+<p>LED Hemat listrik</p>
 
-<span class="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full text-sm">
-Fashion
+<h4>Rp75.000</h4>
+
+<button>Beli</button>
+
+</div>
+
+<!-- 8 -->
+
+<div class="card kos">
+
+<span class="badge promo">
+Promo
 </span>
 
-</div>
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=500">
 
-<div class="p-6">
+<h3>Meja Lipat</h3>
 
-<h3 class="text-2xl font-bold">
-Sepatu Sneakers
-</h3>
+<p>Cocok untuk kos</p>
 
-<p class="text-gray-500 mt-3">
-Original, kondisi 90%, ukuran 42.
-</p>
+<h4>Rp150.000</h4>
 
-<div class="flex justify-between items-center mt-6">
-
-<h2 class="text-blue-600 text-2xl font-bold">
-Rp300.000
-</h2>
-
-<a href="#"
-class="bg-blue-600 hover:bg-blue-700 duration-300 text-white px-5 py-2 rounded-full">
-
-Chat
-
-</a>
+<button>Beli</button>
 
 </div>
 
-</div>
+<!-- 9 -->
+
+<div class="card hobi">
+
+<img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500">
+
+<h3>Sewa Kamera</h3>
+
+<p>Canon EOS 200D</p>
+
+<h4>Rp120.000/hari</h4>
+
+<button>Sewa</button>
 
 </div>
 
+<!-- 10 -->
 
-<!-- Produk 6 -->
+<div class="card hobi">
 
-<div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
-
-<div class="relative">
-
-<img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900"
-class="h-64 w-full object-cover">
-
-<span class="absolute top-4 left-4 bg-indigo-600 text-white px-4 py-2 rounded-full text-sm">
-Elektronik
+<span class="badge favorit">
+Favorit
 </span>
 
-</div>
+<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=500">
 
-<div class="p-6">
+<h3>Raket Badminton</h3>
 
-<h3 class="text-2xl font-bold">
-Keyboard Mechanical
-</h3>
+<p>Yonex Original</p>
 
-<p class="text-gray-500 mt-3">
-Switch biru, cocok untuk mengetik dan coding.
-</p>
+<h4>Rp230.000</h4>
 
-<div class="flex justify-between items-center mt-6">
-
-<h2 class="text-blue-600 text-2xl font-bold">
-Rp450.000
-</h2>
-
-<a href="#"
-class="bg-blue-600 hover:bg-blue-700 duration-300 text-white px-5 py-2 rounded-full">
-
-Chat
-
-</a>
+<button>Beli</button>
 
 </div>
 
+<!-- 11 -->
+
+<div class="card elektronik">
+
+<img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500">
+
+<h3>Laptop Lenovo</h3>
+
+<p>Core i5 RAM 8GB</p>
+
+<h4>Rp4.800.000</h4>
+
+<button>Beli</button>
+
 </div>
+
+<!-- 12 -->
+
+<div class="card buku">
+
+<img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=500">
+
+<h3>Paket Novel</h3>
+
+<p>Isi 10 Buku</p>
+
+<h4>Rp90.000</h4>
+
+<button>Beli</button>
 
 </div>
 
@@ -722,200 +623,217 @@ Chat
 </div>
 
 </section>
-<!-- ================= CARA KERJA ================= -->
+/* ================= PRODUK ================= */
 
-<section id="cara" class="py-20 bg-white">
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:40px;
+font-weight:700;
+}
 
-<div class="max-w-7xl mx-auto px-6">
+.products{
+padding:80px 0;
+background:#f7f9fc;
+}
 
-<div class="text-center">
+.filter{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:40px;
+}
 
-<span class="text-blue-600 font-semibold uppercase">
-Cara Kerja
-</span>
+.filter button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#fff;
+cursor:pointer;
+font-weight:600;
+transition:.3s;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
 
-<h2 class="text-4xl font-bold mt-3">
-Hanya 3 Langkah Mudah
-</h2>
+.filter button:hover,
+.filter .active{
+background:#1565c0;
+color:white;
+}
 
-<p class="text-gray-500 mt-4">
-Jual atau titip barangmu tanpa ribet.
-</p>
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
 
-</div>
+.card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.35s;
+position:relative;
+}
 
-<div class="grid md:grid-cols-3 gap-8 mt-16">
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 18px 35px rgba(0,0,0,.15);
+}
 
-<div class="bg-slate-50 rounded-3xl p-10 text-center card-hover">
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
 
-<div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-3xl">
+.card h3{
+font-size:22px;
+padding:15px 20px 8px;
+}
 
-<i class="fa-solid fa-camera"></i>
+.card p{
+padding:0 20px;
+color:#666;
+font-size:15px;
+}
 
-</div>
+.card h4{
+padding:15px 20px;
+font-size:23px;
+color:#1565c0;
+font-weight:700;
+}
 
-<h3 class="text-2xl font-bold mt-6">
+.card button{
+margin:0 20px 20px;
+width:calc(100% - 40px);
+padding:14px;
+border:none;
+border-radius:10px;
+background:#1565c0;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
 
-Upload Barang
+.card button:hover{
+background:#0d47a1;
+}
 
-</h3>
+.badge{
+position:absolute;
+top:15px;
+left:15px;
+padding:6px 14px;
+border-radius:25px;
+font-size:13px;
+font-weight:600;
+color:white;
+}
 
-<p class="text-gray-500 mt-4">
+.new{
+background:#00c853;
+}
 
-Unggah foto barang beserta deskripsi dan harga.
+.promo{
+background:#ff9800;
+}
 
-</p>
+.favorit{
+background:#e91e63;
+}
 
-</div>
+/* ================= TENTANG ================= */
 
+.about{
+padding:90px 0;
+background:white;
+}
 
-<div class="bg-slate-50 rounded-3xl p-10 text-center card-hover">
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:45px;
+}
 
-<div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-3xl">
+.about-box{
+background:#f7f9fc;
+padding:35px;
+border-radius:18px;
+text-align:center;
+transition:.3s;
+}
 
-<i class="fa-solid fa-comments"></i>
+.about-box:hover{
+transform:translateY(-8px);
+}
 
-</div>
+.about-box i{
+font-size:50px;
+color:#1565c0;
+margin-bottom:20px;
+}
 
-<h3 class="text-2xl font-bold mt-6">
+.about-box h3{
+margin-bottom:15px;
+font-size:22px;
+}
 
-Hubungi Penjual
+.about-box p{
+color:#666;
+line-height:1.7;
+}
+    <!-- ================= TENTANG ================= -->
 
-</h3>
+<section class="about" id="tentang">
 
-<p class="text-gray-500 mt-4">
+<div class="container">
 
-Calon pembeli dapat langsung menghubungi penjual melalui WhatsApp.
-
-</p>
-
-</div>
-
-
-<div class="bg-slate-50 rounded-3xl p-10 text-center card-hover">
-
-<div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-3xl">
-
-<i class="fa-solid fa-handshake"></i>
-
-</div>
-
-<h3 class="text-2xl font-bold mt-6">
-
-Selesaikan Transaksi
-
-</h3>
-
-<p class="text-gray-500 mt-4">
-
-Bertemu di kampus dan lakukan transaksi dengan aman.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= KEUNGGULAN ================= -->
-
-<section class="py-20 bg-slate-100">
-
-<div class="max-w-7xl mx-auto px-6">
-
-<div class="text-center">
-
-<span class="text-blue-600 font-semibold">
-
-Keunggulan
-
-</span>
-
-<h2 class="text-4xl font-bold mt-3">
-
+<h2 class="section-title">
 Kenapa Memilih Kampusale?
-
 </h2>
 
+<div class="about-grid">
+
+<div class="about-box">
+<i class="fa-solid fa-user-graduate"></i>
+<h3>Khusus Mahasiswa</h3>
+<p>
+Platform jual beli yang dibuat khusus untuk kebutuhan mahasiswa,
+mulai dari buku kuliah, elektronik, fashion hingga perlengkapan kos.
+</p>
 </div>
 
-<div class="grid md:grid-cols-4 gap-8 mt-16">
-
-<div class="bg-white rounded-3xl p-8 shadow card-hover text-center">
-
-<i class="fa-solid fa-shield-halved text-5xl text-blue-600"></i>
-
-<h3 class="font-bold text-xl mt-5">
-
-Aman
-
-</h3>
-
-<p class="text-gray-500 mt-3">
-
-Mahasiswa terverifikasi.
-
+<div class="about-box">
+<i class="fa-solid fa-wallet"></i>
+<h3>Harga Terjangkau</h3>
+<p>
+Banyak barang bekas berkualitas dengan harga lebih hemat dibanding
+membeli barang baru.
 </p>
-
 </div>
 
-<div class="bg-white rounded-3xl p-8 shadow card-hover text-center">
-
-<i class="fa-solid fa-wallet text-5xl text-blue-600"></i>
-
-<h3 class="font-bold text-xl mt-5">
-
-Tanpa Admin
-
-</h3>
-
-<p class="text-gray-500 mt-3">
-
-Tidak ada biaya tambahan.
-
+<div class="about-box">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Aman & Terpercaya</h3>
+<p>
+Transaksi dapat dilakukan secara COD maupun transfer dengan sesama
+mahasiswa.
 </p>
-
 </div>
 
-<div class="bg-white rounded-3xl p-8 shadow card-hover text-center">
-
-<i class="fa-solid fa-bolt text-5xl text-blue-600"></i>
-
-<h3 class="font-bold text-xl mt-5">
-
-Cepat
-
-</h3>
-
-<p class="text-gray-500 mt-3">
-
-Barang langsung dipasarkan.
-
+<div class="about-box">
+<i class="fa-solid fa-truck-fast"></i>
+<h3>Mudah & Cepat</h3>
+<p>
+Cari barang hanya dalam beberapa detik dan hubungi penjual secara
+langsung.
 </p>
-
-</div>
-
-<div class="bg-white rounded-3xl p-8 shadow card-hover text-center">
-
-<i class="fa-solid fa-users text-5xl text-blue-600"></i>
-
-<h3 class="font-bold text-xl mt-5">
-
-Komunitas Mahasiswa
-
-</h3>
-
-<p class="text-gray-500 mt-3">
-
-Fokus untuk lingkungan kampus.
-
-</p>
-
 </div>
 
 </div>
@@ -923,102 +841,61 @@ Fokus untuk lingkungan kampus.
 </div>
 
 </section>
-
-
 
 <!-- ================= TESTIMONI ================= -->
 
-<section class="py-20 bg-white">
+<section class="testimonial">
 
-<div class="max-w-7xl mx-auto px-6">
+<div class="container">
 
-<div class="text-center">
-
-<span class="text-blue-600 font-semibold">
-
-Testimoni
-
-</span>
-
-<h2 class="text-4xl font-bold mt-3">
-
-Apa Kata Mereka?
-
+<h2 class="section-title">
+Testimoni Pengguna
 </h2>
 
-</div>
+<div class="testimonial-grid">
 
-<div class="grid md:grid-cols-3 gap-8 mt-16">
+<div class="testi-card">
 
-<div class="bg-slate-50 rounded-3xl p-8 shadow">
+<img src="https://i.pravatar.cc/150?img=32">
 
-⭐⭐⭐⭐⭐
+<h3>Andi</h3>
 
-<p class="mt-5 text-gray-600">
+<span>Mahasiswa Teknik</span>
 
-"Buku kuliah saya langsung laku dalam dua hari."
-
+<p>
+"Website ini sangat membantu saya menjual buku bekas kuliah yang sudah
+tidak dipakai."
 </p>
-
-<h4 class="font-bold mt-6">
-
-Rizky
-
-</h4>
-
-<span class="text-gray-500">
-
-Mahasiswa Informatika
-
-</span>
 
 </div>
 
-<div class="bg-slate-50 rounded-3xl p-8 shadow">
+<div class="testi-card">
 
-⭐⭐⭐⭐⭐
+<img src="https://i.pravatar.cc/150?img=15">
 
-<p class="mt-5 text-gray-600">
+<h3>Salsa</h3>
 
-"Lebih mudah dibanding upload ke marketplace."
+<span>Mahasiswa Ekonomi</span>
 
+<p>
+"Desainnya menarik dan produknya mudah dicari. Sangat cocok untuk
+mahasiswa."
 </p>
-
-<h4 class="font-bold mt-6">
-
-Nadia
-
-</h4>
-
-<span class="text-gray-500">
-
-Mahasiswa Manajemen
-
-</span>
 
 </div>
 
-<div class="bg-slate-50 rounded-3xl p-8 shadow">
+<div class="testi-card">
 
-⭐⭐⭐⭐⭐
+<img src="https://i.pravatar.cc/150?img=49">
 
-<p class="mt-5 text-gray-600">
+<h3>Rizky</h3>
 
-"Sangat membantu saat pindah kos."
+<span>Mahasiswa Informatika</span>
 
+<p>
+"Saya berhasil menyewa kamera untuk tugas kampus dengan harga yang
+murah."
 </p>
-
-<h4 class="font-bold mt-6">
-
-Dimas
-
-</h4>
-
-<span class="text-gray-500">
-
-Mahasiswa Teknik
-
-</span>
 
 </div>
 
@@ -1027,305 +904,364 @@ Mahasiswa Teknik
 </div>
 
 </section>
-
-
 
 <!-- ================= FAQ ================= -->
 
-<section id="faq" class="py-20 bg-slate-50">
+<section class="faq">
 
-<div class="max-w-4xl mx-auto px-6">
+<div class="container">
 
-<div class="text-center">
-
-<span class="text-blue-600 font-semibold">
-
-FAQ
-
-</span>
-
-<h2 class="text-4xl font-bold mt-3">
-
-Pertanyaan yang Sering Ditanyakan
-
+<h2 class="section-title">
+Pertanyaan Umum
 </h2>
+
+<div class="faq-box">
+
+<div class="faq-item">
+
+<h3>
+Apakah Kampusale gratis digunakan?
+</h3>
+
+<p>
+Ya. Semua mahasiswa dapat memasang iklan produk secara gratis.
+</p>
 
 </div>
 
-<div class="space-y-5 mt-16">
+<div class="faq-item">
 
-<details class="bg-white rounded-2xl p-6 shadow">
+<h3>
+Bagaimana cara membeli barang?
+</h3>
 
-<summary class="font-semibold cursor-pointer">
-
-Apakah Kampusale gratis?
-
-</summary>
-
-<p class="mt-4 text-gray-500">
-
-Ya. Kampusale dapat digunakan tanpa biaya admin.
-
+<p>
+Klik tombol beli kemudian hubungi penjual melalui kontak yang tersedia.
 </p>
 
-</details>
+</div>
 
-<details class="bg-white rounded-2xl p-6 shadow">
+<div class="faq-item">
 
-<summary class="font-semibold cursor-pointer">
+<h3>
+Apakah bisa COD?
+</h3>
 
-Bagaimana cara menjual barang?
-
-</summary>
-
-<p class="mt-4 text-gray-500">
-
-Unggah foto barang dan isi informasi produk, lalu pembeli akan menghubungimu.
-
+<p>
+Bisa. Penjual dan pembeli dapat menentukan lokasi COD sesuai kesepakatan.
 </p>
 
-</details>
-
-<details class="bg-white rounded-2xl p-6 shadow">
-
-<summary class="font-semibold cursor-pointer">
-
-Bagaimana transaksi dilakukan?
-
-</summary>
-
-<p class="mt-4 text-gray-500">
-
-Transaksi dilakukan secara langsung antara penjual dan pembeli di lingkungan kampus.
-
-</p>
-
-</details>
+</div>
 
 </div>
 
 </div>
 
 </section>
-<!-- ================= CTA ================= -->
 
-<section class="py-20 bg-blue-600">
+<!-- ================= FOOTER ================= -->
 
-<div class="max-w-6xl mx-auto px-6 text-center text-white">
+<footer id="kontak">
 
-<h2 class="text-5xl font-bold">
+<div class="container">
 
-Siap Menjual Barang Bekasmu?
+<h2>Kampusale</h2>
 
-</h2>
-
-<p class="mt-6 text-lg text-blue-100">
-
-Bergabung bersama Kampusale dan temukan pembeli dari sesama mahasiswa dengan mudah, cepat, dan aman.
-
+<p>
+Marketplace mahasiswa untuk jual, beli, dan sewa barang kebutuhan
+kampus.
 </p>
 
-<div class="mt-10">
+<div class="social">
 
-<a href="https://wa.me/6281234567890"
-target="_blank"
-class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 duration-300">
+<a href="#">
+<i class="fab fa-instagram"></i>
+@kampusale
+</a>
 
-<i class="fa-brands fa-whatsapp"></i>
-
-Hubungi Kami
-
+<a href="#">
+<i class="fab fa-tiktok"></i>
+@kampusale
 </a>
 
 </div>
 
-</div>
-
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="bg-slate-900 text-white">
-
-<div class="max-w-7xl mx-auto px-6 py-16">
-
-<div class="grid md:grid-cols-4 gap-10">
-
-<div>
-
-<h2 class="text-3xl font-bold text-blue-400">
-
-<i class="fa-solid fa-box-open"></i>
-
-Kampusale
-
-</h2>
-
-<p class="text-gray-400 mt-5 leading-7">
-
-Platform jual beli dan penitipan barang bekas khusus mahasiswa agar barang tetap bermanfaat dan bernilai.
-
-</p>
-
-</div>
-
-
-
-<div>
-
-<h3 class="font-bold text-xl mb-5">
-
-Menu
-
-</h3>
-
-<ul class="space-y-3 text-gray-400">
-
-<li><a href="#home" class="hover:text-white">Beranda</a></li>
-
-<li><a href="#kategori" class="hover:text-white">Kategori</a></li>
-
-<li><a href="#produk" class="hover:text-white">Produk</a></li>
-
-<li><a href="#cara" class="hover:text-white">Cara Kerja</a></li>
-
-</ul>
-
-</div>
-
-
-
-<div>
-
-<h3 class="font-bold text-xl mb-5">
-
-Bantuan
-
-</h3>
-
-<ul class="space-y-3 text-gray-400">
-
-<li>FAQ</li>
-
-<li>Pusat Bantuan</li>
-
-<li>Syarat & Ketentuan</li>
-
-<li>Kebijakan Privasi</li>
-
-</ul>
-
-</div>
-
-
-
-<div>
-
-<h3 class="font-bold text-xl mb-5">
-
-Hubungi Kami
-
-</h3>
-
-<div class="space-y-4 text-gray-400">
-
-<p>
-
-<i class="fa-solid fa-envelope"></i>
-
-kampusale@email.com
-
-</p>
-
-<p>
-
-<i class="fa-brands fa-whatsapp"></i>
-
-0812-3456-7890
-
-</p>
-
-<p>
-
-<i class="fa-solid fa-location-dot"></i>
-
-Surabaya
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<hr class="border-slate-700 my-10">
-
-<p class="text-center text-gray-500">
-
+<p class="copy">
 © 2025 Kampusale. All Rights Reserved.
-
 </p>
 
 </div>
 
 </footer>
+/* ================= TESTIMONI ================= */
 
+.testimonial{
+padding:90px 0;
+background:#eef5ff;
+}
 
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:50px;
+}
 
-<!-- ================= WHATSAPP FLOAT ================= -->
+.testi-card{
+background:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.35s;
+}
 
-<a href="https://wa.me/6281234567890"
-target="_blank"
-class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-xl">
+.testi-card:hover{
+transform:translateY(-10px);
+}
 
-<i class="fa-brands fa-whatsapp"></i>
+.testi-card img{
+width:90px;
+height:90px;
+border-radius:50%;
+margin:auto;
+margin-bottom:20px;
+object-fit:cover;
+}
 
-</a>
+.testi-card h3{
+margin-bottom:8px;
+font-size:22px;
+}
 
+.testi-card span{
+color:#1565c0;
+font-weight:600;
+display:block;
+margin-bottom:18px;
+}
 
+.testi-card p{
+color:#666;
+line-height:1.8;
+}
 
-<!-- ================= JAVASCRIPT ================= -->
+/* ================= FAQ ================= */
 
+.faq{
+padding:90px 0;
+background:white;
+}
+
+.faq-box{
+max-width:850px;
+margin:auto;
+margin-top:50px;
+}
+
+.faq-item{
+background:#f7f9fc;
+padding:25px;
+margin-bottom:20px;
+border-radius:15px;
+transition:.3s;
+}
+
+.faq-item:hover{
+background:#eaf2ff;
+}
+
+.faq-item h3{
+margin-bottom:12px;
+color:#1565c0;
+}
+
+.faq-item p{
+line-height:1.8;
+color:#666;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#0f172a;
+color:white;
+padding:70px 20px 30px;
+text-align:center;
+}
+
+footer h2{
+font-size:34px;
+margin-bottom:18px;
+}
+
+footer p{
+opacity:.9;
+line-height:1.8;
+}
+
+.social{
+margin:35px 0;
+display:flex;
+justify-content:center;
+gap:35px;
+flex-wrap:wrap;
+}
+
+.social a{
+background:#1565c0;
+padding:14px 24px;
+border-radius:40px;
+transition:.3s;
+font-weight:600;
+}
+
+.social a:hover{
+background:#0d47a1;
+transform:translateY(-5px);
+}
+
+.copy{
+margin-top:35px;
+font-size:14px;
+opacity:.7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.section-title{
+font-size:28px;
+}
+
+.filter{
+gap:10px;
+}
+
+.filter button{
+padding:10px 18px;
+font-size:14px;
+}
+
+.card img{
+height:180px;
+}
+
+.about-grid,
+.testimonial-grid{
+grid-template-columns:1fr;
+}
+
+.social{
+flex-direction:column;
+gap:15px;
+}
+
+}
 <script>
 
-/* Mobile Menu */
+// ================= SEARCH =================
 
-const menuBtn = document.getElementById("menuBtn");
+const searchInput = document.getElementById("searchInput");
 
-const mobileMenu = document.getElementById("mobileMenu");
+searchInput.addEventListener("keyup", function(){
 
-menuBtn.addEventListener("click",()=>{
+let keyword = this.value.toLowerCase();
 
-mobileMenu.classList.toggle("hidden");
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+let nama = card.querySelector("h3").textContent.toLowerCase();
+
+if(nama.includes(keyword)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
 
 });
 
+});
 
-/* Navbar Scroll */
+// ================= FILTER =================
 
-window.addEventListener("scroll",()=>{
+function filterProduk(kategori){
 
-const navbar=document.querySelector("header");
+let cards=document.querySelectorAll(".card");
 
-if(window.scrollY>50){
+cards.forEach(card=>{
 
-navbar.classList.add("shadow-xl");
+if(kategori==="all"){
+
+card.style.display="block";
 
 }
 
 else{
 
-navbar.classList.remove("shadow-xl");
+if(card.classList.contains(kategori)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
 
 }
 
 });
 
+}
 
-/* Fade Animation */
+let tombol=document.querySelectorAll(".filter button");
+
+tombol.forEach(btn=>{
+
+btn.addEventListener("click",function(){
+
+tombol.forEach(item=>item.classList.remove("active"));
+
+this.classList.add("active");
+
+});
+
+});
+
+// ================= NAVBAR =================
+
+window.addEventListener("scroll",function(){
+
+let nav=document.querySelector("nav");
+
+if(window.scrollY>50){
+
+nav.style.padding="12px 0";
+
+nav.style.background="#ffffff";
+
+nav.style.boxShadow="0 10px 25px rgba(0,0,0,.12)";
+
+}else{
+
+nav.style.padding="18px 0";
+
+nav.style.background="#ffffff";
+
+nav.style.boxShadow="0 5px 18px rgba(0,0,0,.08)";
+
+}
+
+});
+
+// ================= SCROLL ANIMATION =================
 
 const observer=new IntersectionObserver((entries)=>{
 
@@ -1333,9 +1269,9 @@ entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.classList.add("opacity-100");
+entry.target.style.opacity="1";
 
-entry.target.classList.remove("opacity-0","translate-y-8");
+entry.target.style.transform="translateY(0px)";
 
 }
 
@@ -1343,17 +1279,19 @@ entry.target.classList.remove("opacity-0","translate-y-8");
 
 });
 
-document.querySelectorAll("section").forEach(section=>{
+document.querySelectorAll(".card,.about-box,.testi-card,.faq-item").forEach(el=>{
 
-section.classList.add("opacity-0","translate-y-8","duration-700");
+el.style.opacity="0";
 
-observer.observe(section);
+el.style.transform="translateY(40px)";
+
+el.style.transition=".6s";
+
+observer.observe(el);
 
 });
 
 </script>
 
-
 </body>
-
 </html>
