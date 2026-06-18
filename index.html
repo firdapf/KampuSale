@@ -1,3 +1,6 @@
+Berikut kode lengkapnya dengan IG dan TikTok @kampusale sudah ditambahkan di navbar dan footer:
+
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -26,7 +29,15 @@
                 <a href="#simulasi" class="hover:text-indigo-600 transition">Simulasi</a>
                 <a href="#faq" class="hover:text-indigo-600 transition">FAQ</a>
             </div>
-            <div>
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:flex items-center gap-3 text-indigo-950 text-lg">
+                    <a href="https://www.instagram.com/kampusale" target="_blank" class="hover:text-orange-500 transition" aria-label="Instagram Kampusale">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@kampusale" target="_blank" class="hover:text-orange-500 transition" aria-label="TikTok Kampusale">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
                 <a href="https://wa.me/6285866882464" target="_blank" class="bg-indigo-600 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-indigo-700 transition shadow-lg shadow-indigo-200 text-sm hidden sm:block">
                     Titip Jual Barang
                 </a>
@@ -480,6 +491,17 @@
             <div class="flex items-center space-x-3">
                 <span class="text-xl font-extrabold text-white tracking-tighter italic">KAMPU<span class="text-orange-500">SALE</span></span>
             </div>
+            <div class="flex items-center gap-5 text-lg">
+                <a href="https://www.instagram.com/kampusale" target="_blank" class="hover:text-orange-500 transition" aria-label="Instagram Kampusale">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@kampusale" target="_blank" class="hover:text-orange-500 transition" aria-label="TikTok Kampusale">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://wa.me/6285866882464" target="_blank" class="hover:text-orange-500 transition" aria-label="WhatsApp Kampusale">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
             <p class="text-xs text-center sm:text-right">&copy; 2026 Kampusale Surabaya. Project Kewirausahaan Mahasiswa. All Rights Reserved.</p>
         </div>
     </footer>
@@ -570,3 +592,4 @@
 
 </body>
 </html>
+```
