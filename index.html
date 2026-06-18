@@ -589,7 +589,46 @@ Berikut kode lengkapnya dengan IG dan TikTok @kampusale sudah ditambahkan di nav
             document.getElementById('transactionForm').reset();
         }
     </script>
+<div id="modalPesan" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-indigo-950/50 backdrop-blur-sm" onclick="closeModal()"></div>
+    <div class="bg-white rounded-3xl p-8 w-full max-w-sm relative shadow-2xl">
+        <h3 class="text-xl font-bold text-indigo-950 mb-4">Formulir Pesanan</h3>
+        <input type="text" id="namaBarang" readonly class="w-full bg-slate-100 p-3 rounded-xl mb-3 font-bold border border-slate-200">
+        <input type="text" id="namaPembeli" placeholder="Nama Lengkap Anda" class="w-full p-3 rounded-xl mb-3 border border-slate-200 focus:ring-2 focus:ring-indigo-500 outline-none">
+        <button onclick="kirimWhatsApp()" class="w-full bg-emerald-500 text-white py-3 rounded-xl font-bold hover:bg-emerald-600 transition">Kirim Pesanan ke WA</button>
+    </div>
+</div>
 
+<script>
+    // FUNGSI SEARCH (Tambahkan input id="searchBar" di kolom pencarianmu)
+    function filterKatalog() {
+        let input = document.getElementById('searchBar').value.toLowerCase();
+        let items = document.querySelectorAll('#katalog > div');
+        items.forEach(item => {
+            let title = item.querySelector('h4').innerText.toLowerCase();
+            item.style.display = title.includes(input) ? '' : 'none';
+        });
+    }
+
+    // FUNGSI MODAL
+    function openModal(nama) {
+        document.getElementById('namaBarang').value = nama;
+        document.getElementById('modalPesan').classList.remove('hidden');
+        document.getElementById('modalPesan').classList.add('flex');
+    }
+
+    function closeModal() {
+        document.getElementById('modalPesan').classList.add('hidden');
+    }
+
+    function kirimWhatsApp() {
+        let barang = document.getElementById('namaBarang').value;
+        let pembeli = document.getElementById('namaPembeli').value;
+        if(pembeli === "") { alert("Mohon isi nama kamu dulu ya!"); return; }
+        window.open(`https://wa.me/6285866882464?text=Halo Admin Kampusale, saya mau pesan ${barang}. Nama saya ${pembeli}`);
+        closeModal();
+    }
+</script>
 </body>
 </html>
 ```
