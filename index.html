@@ -3,320 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kampusale adalah platform perantara jual beli dan sewa barang bebas biaya admin khusus mahasiswa.">
     <title>Kampusale - Jual Beli Mahasiswa Tanpa Admin</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; }</style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased pt-20">
+<body class="pt-20">
 
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-2 cursor-pointer" onclick="switchPage('beranda')">
-                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg">K</div>
-                <span class="font-bold text-xl tracking-tight text-slate-900">Kampusale</span>
+            <img src="images/KAMPUS_SALE.png" alt="Logo" class="h-10 cursor-pointer" onclick="switchPage('beranda')">
+            <div class="hidden md:flex space-x-8 font-bold text-sm">
+                <button onclick="switchPage('beranda')" class="hover:text-indigo-600">Beranda</button>
+                <button onclick="switchPage('katalog')" class="hover:text-indigo-600">Katalog</button>
             </div>
-            <div class="hidden lg:flex space-x-8 font-bold text-slate-600 text-sm">
-                <button onclick="switchPage('beranda')" class="nav-link text-indigo-600 hover:text-indigo-600 transition">Beranda</button>
-                <button onclick="switchPage('katalog')" class="nav-link hover:text-indigo-600 transition">Katalog Titipan</button>
-                <button onclick="switchPage('alur')" class="nav-link hover:text-indigo-600 transition">Alur Perantara</button>
-                <button onclick="switchPage('faq')" class="nav-link hover:text-indigo-600 transition">FAQ</button>
-            </div>
-            <button onclick="switchPage('katalog')" class="hidden lg:block bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold text-sm transition shadow-md shadow-orange-200">
-                Mulai Belanja
-            </button>
-            <button class="lg:hidden text-slate-600" onclick="alert('Untuk tugas, fokus gunakan tampilan desktop/laptop agar presentasi maksimal!')">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
         </div>
     </nav>
 
     <div id="page-beranda" class="page-section">
-        <header class="max-w-7xl mx-auto px-6 pt-12 pb-12 lg:pt-20 grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="inline-block bg-orange-100 text-orange-600 font-bold px-4 py-1.5 rounded-full text-xs mb-6 border border-orange-200">
-                    🔥 Solusi Kantong Mahasiswa
-                </div>
-                <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight mb-6 text-slate-900">
-                    Biaya admin marketplace <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-400">terlalu besar?</span>
-                </h1>
-                <p class="text-lg text-slate-600 mb-10 leading-relaxed">
-                    Kampusale hadir sebagai perantara jual beli dan sewa barang khusus mahasiswa. Transaksi aman, COD gampang, dan yang pasti <strong>0% biaya admin</strong>.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button onclick="switchPage('katalog')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-2xl font-bold transition shadow-xl shadow-indigo-200 flex justify-center items-center gap-2">
-                        Lihat Barang Titipan
-                    </button>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="absolute inset-0 bg-gradient-to-tr from-indigo-100 to-orange-50 rounded-3xl transform rotate-3 scale-105"></div>
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mahasiswa Transaksi" class="relative rounded-3xl shadow-2xl object-cover h-[400px] w-full">
-            </div>
+        <header class="max-w-7xl mx-auto px-6 py-20 text-center">
+            <h1 class="text-5xl font-extrabold mb-6">Marketplace <span class="text-indigo-600">0% Admin</span></h1>
+            <p class="text-slate-600 mb-10 max-w-lg mx-auto">Platform jual beli aman khusus mahasiswa. Tanpa potongan, langsung COD!</p>
+            <button onclick="switchPage('katalog')" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold">Mulai Belanja</button>
         </header>
-
-        <section class="max-w-7xl mx-auto px-6 py-16">
-            <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-slate-100 text-center">
-                <h2 class="text-2xl lg:text-3xl font-extrabold mb-8 text-slate-900">Simulasi Penghematan</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-red-50 rounded-2xl p-6 border border-red-100">
-                        <h3 class="font-bold text-red-800 mb-2">Marketplace Lain</h3>
-                        <p class="text-slate-600 text-sm mb-4">Jual Buku Harga Rp 100.000</p>
-                        <div class="text-sm space-y-2 mb-4 text-left">
-                            <div class="flex justify-between"><span>Biaya Admin (10%)</span><span class="text-red-600 font-bold">- Rp 10.000</span></div>
-                            <div class="flex justify-between"><span>Biaya Layanan</span><span class="text-red-600 font-bold">- Rp 1.000</span></div>
-                        </div>
-                        <div class="border-t border-red-200 pt-4 flex justify-between font-extrabold text-lg text-slate-800">
-                            <span>Uang Diterima:</span><span>Rp 89.000</span>
-                        </div>
-                    </div>
-                    <div class="bg-emerald-50 rounded-2xl p-6 border border-emerald-100 relative overflow-hidden">
-                        <div class="absolute -right-4 -top-4 bg-emerald-500 text-white text-xs font-bold px-6 py-1 rotate-45">REKOMENDASI</div>
-                        <h3 class="font-bold text-emerald-800 mb-2">Di Kampusale</h3>
-                        <p class="text-slate-600 text-sm mb-4">Jual Buku Harga Rp 100.000</p>
-                        <div class="text-sm space-y-2 mb-4 text-left">
-                            <div class="flex justify-between"><span>Biaya Admin</span><span class="text-emerald-600 font-bold">Rp 0</span></div>
-                            <div class="flex justify-between"><span>Biaya Layanan</span><span class="text-emerald-600 font-bold">Rp 0</span></div>
-                        </div>
-                        <div class="border-t border-emerald-200 pt-4 flex justify-between font-extrabold text-lg text-slate-800">
-                            <span>Uang Diterima:</span><span class="text-emerald-600">Rp 100.000</span>
-                        </div>
-                    </div>
-                </div>
+        
+        <section class="max-w-7xl mx-auto px-6 py-12">
+            <h2 class="text-2xl font-bold mb-8 text-center">Testimoni Pengguna</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-3xl shadow-sm border">"Gak ada potongan admin, cuan jadi maksimal!"</div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm border">"COD-an gampang, adminnya super responsif."</div>
             </div>
         </section>
     </div>
 
     <div id="page-katalog" class="page-section hidden">
-        <section class="max-w-7xl mx-auto px-6 py-12">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Katalog Titipan</h2>
-                <p class="text-slate-600">Barang preloved mahasiswa yang siap dipinang.</p>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-3 mb-12" id="filter-container">
-                <button onclick="filterKategori('semua', this)" class="filter-btn bg-indigo-600 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition shadow-md">Semua</button>
-                <button onclick="filterKategori('Buku Kuliah', this)" class="filter-btn bg-white border border-slate-200 text-slate-600 font-bold px-5 py-2.5 rounded-xl text-xs hover:bg-slate-50 transition">Buku Kuliah</button>
-                <button onclick="filterKategori('Elektronik', this)" class="filter-btn bg-white border border-slate-200 text-slate-600 font-bold px-5 py-2.5 rounded-xl text-xs hover:bg-slate-50 transition">Elektronik</button>
-                <button onclick="filterKategori('Fashion', this)" class="filter-btn bg-white border border-slate-200 text-slate-600 font-bold px-5 py-2.5 rounded-xl text-xs hover:bg-slate-50 transition">Fashion</button>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8" id="katalog-grid">
-                
-                <div class="bg-white rounded-3xl p-4 border border-slate-100 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="Buku Kuliah">
-                    <div>
-                        <div class="h-48 bg-slate-100 rounded-2xl mb-4 flex items-center justify-center text-4xl">📚</div>
-                        <div class="text-xs font-bold text-indigo-600 mb-2">Buku Kuliah</div>
-                        <h3 class="font-bold text-lg mb-1 text-slate-900">Buku Kalkulus Edisi 9</h3>
-                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Kondisi 90% mulus, ada sedikit coretan pensil. Cocok untuk maba Teknik.</p>
-                    </div>
-                    <div>
-                        <div class="font-extrabold text-xl text-slate-900 mb-4">Rp 75.000</div>
-                        <button onclick="openModal('Buku Kalkulus Edisi 9')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition text-sm">
-                            Beli Sekarang
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-3xl p-4 border border-slate-100 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="Elektronik">
-                    <div>
-                        <div class="h-48 bg-slate-100 rounded-2xl mb-4 flex items-center justify-center text-4xl">💻</div>
-                        <div class="text-xs font-bold text-indigo-600 mb-2">Elektronik</div>
-                        <h3 class="font-bold text-lg mb-1 text-slate-900">Mouse Wireless Logitech</h3>
-                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Masih normal, baterai awet. Dijual karena sudah lulus.</p>
-                    </div>
-                    <div>
-                        <div class="font-extrabold text-xl text-slate-900 mb-4">Rp 50.000</div>
-                        <button onclick="openModal('Mouse Wireless Logitech')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition text-sm">
-                            Beli Sekarang
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-3xl p-4 border border-slate-100 shadow-sm hover:shadow-xl transition flex flex-col justify-between" data-category="Fashion">
-                    <div>
-                        <div class="h-48 bg-slate-100 rounded-2xl mb-4 flex items-center justify-center text-4xl">🧥</div>
-                        <div class="text-xs font-bold text-indigo-600 mb-2">Fashion</div>
-                        <h3 class="font-bold text-lg mb-1 text-slate-900">Jas Almamater Ukuran M</h3>
-                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Baru pakai 2 kali saat ospek. Sudah di-laundry bersih.</p>
-                    </div>
-                    <div>
-                        <div class="font-extrabold text-xl text-slate-900 mb-4">Rp 120.000</div>
-                        <button onclick="openModal('Jas Almamater Ukuran M')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition text-sm">
-                            Beli Sekarang
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </div>
-
-    <div id="page-alur" class="page-section hidden">
-        <section class="max-w-7xl mx-auto px-6 py-16">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Cara Kerja Kampusale</h2>
-                <p class="text-slate-600">Simpel, aman, dan tanpa potongan biaya aneh-aneh.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6">
-                    <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-6">1</div>
-                    <h3 class="font-bold text-lg mb-2">Pilih Barang</h3>
-                    <p class="text-slate-600 text-sm">Cari barang yang kamu butuhkan di Katalog Titipan kami.</p>
-                </div>
-                <div class="p-6">
-                    <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-6">2</div>
-                    <h3 class="font-bold text-lg mb-2">Isi Form & Chat Admin</h3>
-                    <p class="text-slate-600 text-sm">Klik beli, isi form COD, dan kamu akan diarahkan ke WhatsApp Admin.</p>
-                </div>
-                <div class="p-6">
-                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl font-black mx-auto mb-6">3</div>
-                    <h3 class="font-bold text-lg mb-2">COD & Bayar</h3>
-                    <p class="text-slate-600 text-sm">Ketemuan di area kampus, cek barang, dan bayar tunai/transfer langsung ke penjual.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="page-faq" class="page-section hidden">
-        <section class="bg-indigo-950 py-20 text-white border-t-8 border-orange-500 h-screen">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <h2 class="text-3xl font-extrabold mb-8">Pertanyaan Seputar Kampusale</h2>
-                <div class="space-y-4 text-left">
-                    <div class="bg-indigo-900/50 p-6 rounded-2xl">
-                        <h4 class="font-bold text-lg mb-2 text-orange-400">Apakah benar-benar 100% gratis admin?</h4>
-                        <p class="text-indigo-100/80 text-sm">Ya! Kami fokus pada komunitas mahasiswa. Penjual menerima uang utuh, pembeli tidak kena biaya layanan.</p>
-                    </div>
-                    <div class="bg-indigo-900/50 p-6 rounded-2xl">
-                        <h4 class="font-bold text-lg mb-2 text-orange-400">Bagaimana kalau saya mau titip jual?</h4>
-                        <p class="text-indigo-100/80 text-sm">Kamu cukup DM ke Instagram kami atau chat WhatsApp admin dengan mengirim foto dan harga barang.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div id="transactionModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl w-full max-w-md p-8 transform scale-95 transition-transform duration-300 shadow-2xl relative">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-red-500">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <h3 class="text-2xl font-extrabold text-slate-900 mb-2">Detail Pesanan</h3>
-            <p class="text-slate-500 text-sm mb-6">Isi data untuk janjian COD via WhatsApp Admin.</p>
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <h2 class="text-3xl font-bold text-center mb-8">Katalog Produk</h2>
             
-            <form id="purchaseForm" onsubmit="submitForm(event)">
-                <div class="mb-4">
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Nama Barang</label>
-                    <input type="text" id="productNameInput" readonly class="w-full bg-slate-100 border-none rounded-xl px-4 py-3 text-slate-500 font-medium focus:ring-0">
-                </div>
-                <div class="mb-4">
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Nama Kamu</label>
-                    <input type="text" id="buyerName" required placeholder="Contoh: Budi (Teknik Mesin)" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:ring-2 focus:ring-indigo-600 focus:border-transparent outline-none">
-                </div>
-                <div class="mb-8">
-                    <label class="block text-sm font-bold text-slate-700 mb-2">Lokasi COD (Area Kampus)</label>
-                    <input type="text" id="buyerLocation" required placeholder="Contoh: Depan Perpus Pusat" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:ring-2 focus:ring-indigo-600 focus:border-transparent outline-none">
-                </div>
-                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-emerald-200 flex justify-center items-center gap-2">
-                    Kirim ke WhatsApp Admin
-                </button>
-            </form>
+            <div class="max-w-md mx-auto mb-10">
+                <input type="text" id="searchInput" onkeyup="searchBarang()" placeholder="Cari barang..." class="w-full p-4 rounded-2xl border border-slate-200 shadow-sm outline-none">
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="katalog-grid">
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="kipas angin"><img src="images/kipas_angin.png" class="rounded-2xl mb-3"><h3 class="font-bold">Kipas Angin</h3><button onclick="openModal('Kipas Angin')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="baju bapel"><img src="images/baju_bapel.png" class="rounded-2xl mb-3"><h3 class="font-bold">Baju Bapel</h3><button onclick="openModal('Baju Bapel')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="lampu belajar"><img src="images/lampu_belajar.png" class="rounded-2xl mb-3"><h3 class="font-bold">Lampu Belajar</h3><button onclick="openModal('Lampu Belajar')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="buku kalkulus"><img src="images/buku_kalkulus.png" class="rounded-2xl mb-3"><h3 class="font-bold">Buku Kalkulus</h3><button onclick="openModal('Buku Kalkulus')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="sewa ht"><img src="images/sewa_ht.png" class="rounded-2xl mb-3"><h3 class="font-bold">Sewa HT</h3><button onclick="openModal('Sewa HT')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="sewa kamera"><img src="images/sewa_kamera.png" class="rounded-2xl mb-3"><h3 class="font-bold">Sewa Kamera</h3><button onclick="openModal('Sewa Kamera')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="box plastik"><img src="images/box_plastik.png" class="rounded-2xl mb-3"><h3 class="font-bold">Box Plastik</h3><button onclick="openModal('Box Plastik')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="gantungan kunci"><img src="images/gantungan_kunci.png" class="rounded-2xl mb-3"><h3 class="font-bold">Gantungan Kunci</h3><button onclick="openModal('Gantungan Kunci')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="meja lipat"><img src="images/meja_lipat.png" class="rounded-2xl mb-3"><h3 class="font-bold">Meja Lipat</h3><button onclick="openModal('Meja Lipat')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="topi baseball"><img src="images/topi_baseball.png" class="rounded-2xl mb-3"><h3 class="font-bold">Topi Baseball</h3><button onclick="openModal('Topi Baseball')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+                <div class="bg-white p-4 rounded-3xl shadow-sm card" data-name="tumblr stainless"><img src="images/tumblr_stainless.png" class="rounded-2xl mb-3"><h3 class="font-bold">Tumblr Stainless</h3><button onclick="openModal('Tumblr Stainless')" class="w-full mt-2 bg-slate-900 text-white py-2 rounded-xl text-sm">Beli</button></div>
+            </div>
         </div>
     </div>
 
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
-        <p>&copy; 2026 Tugas Kewirausahaan - Kampusale. Dibuat dengan semangat mahasiswa.</p>
-    </footer>
+    <div id="modal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white p-8 rounded-3xl w-full max-w-sm">
+            <h2 class="font-bold text-lg mb-4">Pesan Barang</h2>
+            <input type="text" id="barang" readonly class="w-full p-3 border rounded-xl mb-4 bg-slate-100">
+            <input type="text" id="nama" placeholder="Nama Anda" class="w-full p-3 border rounded-xl mb-4">
+            <button onclick="kirimWA()" class="w-full bg-emerald-500 text-white py-3 rounded-xl font-bold">Kirim ke Admin</button>
+        </div>
+    </div>
 
     <script>
-        // 1. Logika Pindah Halaman (Single Page Application)
-        function switchPage(pageId) {
-            // Sembunyikan semua section
-            const sections = document.querySelectorAll('.page-section');
-            sections.forEach(section => section.classList.add('hidden'));
-
-            // Tampilkan section yang dituju
-            document.getElementById(`page-${pageId}`).classList.remove('hidden');
-
-            // Reset warna link navigasi
-            const links = document.querySelectorAll('.nav-link');
-            links.forEach(link => {
-                link.classList.remove('text-indigo-600');
-                if (link.innerText.toLowerCase().includes(pageId === 'beranda' ? 'beranda' : pageId.substring(0, 3))) {
-                    link.classList.add('text-indigo-600');
-                }
-            });
-
-            // Scroll ke paling atas
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function switchPage(id) {
+            document.querySelectorAll('.page-section').forEach(p => p.classList.add('hidden'));
+            document.getElementById('page-' + id).classList.remove('hidden');
         }
-
-        // 2. Logika Filter Kategori di Katalog
-        function filterKategori(kategori, btnElement) {
-            // Reset style semua tombol filter
-            const allBtns = document.querySelectorAll('.filter-btn');
-            allBtns.forEach(btn => {
-                btn.className = "filter-btn bg-white border border-slate-200 text-slate-600 font-bold px-5 py-2.5 rounded-xl text-xs hover:bg-slate-50 transition";
-            });
-            // Aktifkan style tombol yang diklik
-            btnElement.className = "filter-btn bg-indigo-600 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition shadow-md";
-
-            // Saring produk
-            const cards = document.querySelectorAll('#katalog-grid > div');
-            cards.forEach(card => {
-                const itemCategory = card.getAttribute('data-category');
-                if (kategori === 'semua' || itemCategory === kategori) {
-                    card.style.display = 'flex'; // Pakai flex agar bentuk card tetap presisi
-                } else {
-                    card.style.display = 'none';
-                }
+        function openModal(name) {
+            document.getElementById('barang').value = name;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+        function searchBarang() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            document.querySelectorAll('.card').forEach(c => {
+                c.style.display = c.dataset.name.includes(input) ? '' : 'none';
             });
         }
-
-        // 3. Logika Modal WhatsApp
-        const modal = document.getElementById('transactionModal');
-        const modalInner = modal.children[0];
-
-        function openModal(productName) {
-            document.getElementById('productNameInput').value = productName;
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modalInner.classList.remove('scale-95');
-                modalInner.classList.add('scale-100');
-            }, 10);
+        function kirimWA() {
+            let b = document.getElementById('barang').value;
+            let n = document.getElementById('nama').value;
+            window.open(`https://wa.me/6281234567890?text=Halo Admin, saya mau pesan ${b}. Nama saya ${n}`);
         }
-
-        function closeModal() {
-            modal.classList.add('opacity-0');
-            modalInner.classList.remove('scale-100');
-            modalInner.classList.add('scale-95');
-            setTimeout(() => { modal.classList.add('hidden'); }, 300);
-        }
-
-        function submitForm(event) {
-            event.preventDefault();
-            const product = document.getElementById('productNameInput').value;
-            const name = document.getElementById('buyerName').value;
-            const location = document.getElementById('buyerLocation').value;
-            
-            // Format Pesan WA
-            const text = `Halo Admin Kampusale! 🎓%0A%0ASaya tertarik untuk transaksi via Web:%0A📦 *Barang:* ${product}%0A👤 *Nama:* ${name}%0A📍 *Area COD:* ${location}%0A%0AApakah barang tersebut masih tersedia?`;
-            
-            // Masukkan Nomor WhatsApp Kamu di Sini (Ganti 628...)
-            window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
-            
-            closeModal();
-            document.getElementById('purchaseForm').reset();
-        }
-
-        // Tutup modal kalau area gelap di luar kotak diklik
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) closeModal();
-        });
+        window.onclick = (e) => { if(e.target.id == 'modal') document.getElementById('modal').classList.add('hidden'); }
     </script>
 </body>
 </html>
